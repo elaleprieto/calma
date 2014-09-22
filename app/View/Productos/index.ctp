@@ -4,6 +4,8 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('codigo'); ?></th>
+			<th><?php echo $this->Paginator->sort('barra'); ?></th>
 			<th><?php echo $this->Paginator->sort('orden'); ?></th>
 			<th><?php echo $this->Paginator->sort('detalle'); ?></th>
 			<th><?php echo $this->Paginator->sort('unidad'); ?></th>
@@ -22,6 +24,8 @@
 	<?php foreach ($productos as $producto): ?>
 	<tr>
 		<td><?php echo h($producto['Producto']['id']); ?>&nbsp;</td>
+		<td><?php echo h($producto['Producto']['codigo']); ?>&nbsp;</td>
+		<td><?php echo h($producto['Producto']['barra']); ?>&nbsp;</td>
 		<td><?php echo h($producto['Producto']['orden']); ?>&nbsp;</td>
 		<td><?php echo h($producto['Producto']['detalle']); ?>&nbsp;</td>
 		<td><?php echo h($producto['Producto']['unidad']); ?>&nbsp;</td>

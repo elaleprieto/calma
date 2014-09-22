@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Movimiento $Movimiento
  * @property Ordene $Ordene
+ * @property Proveedore $Proveedore
  */
 class Producto extends AppModel {
 
@@ -14,6 +15,26 @@ class Producto extends AppModel {
  * @var array
  */
 	public $validate = array(
+		'codigo' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'barra' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'orden' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -129,6 +150,28 @@ class Producto extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		)
+	);
+
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Proveedore' => array(
+			'className' => 'Proveedore',
+			'joinTable' => 'productos_proveedores',
+			'foreignKey' => 'producto_id',
+			'associationForeignKey' => 'proveedore_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
 		)
 	);
 

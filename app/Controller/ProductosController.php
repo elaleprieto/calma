@@ -7,6 +7,41 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class ProductosController extends AppController {
+	/**************************************************************************************************************
+	* Authentication
+	**************************************************************************************************************/
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow();
+	}
+
+	public function isAuthorized($user = null) {
+		$owner_allowed = array();
+		$user_allowed = array('index');
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array());
+
+		# All registered users can:
+		if (in_array($this->action, $user_allowed))
+			return true;
+
+		# Admin users can:
+		// if ($user['rol'] === 'admin')
+		if ($user['Rol']['weight'] >= $this->User->ADMIN)
+			if (in_array($this->action, $admin_allowed))
+				return true;
+
+		# The owner of an user can:
+		if (in_array($this->action, $owner_allowed)) {
+			$userId = $this->request->params['pass'][0];
+			if ($this->Event->isOwnedBy($userId, $user['id']))
+				return true;
+		}
+
+		return parent::isAuthorized($user);
+	}
+	/**************************************************************************************************************
+	* /authentication
+	**************************************************************************************************************/
 
 /**
  * Components

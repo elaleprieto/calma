@@ -17,6 +17,7 @@ class ProductosControllerTest extends ControllerTestCase {
 		'app.movimiento',
 		'app.accione',
 		'app.user',
+		'app.rol',
 		'app.ordene',
 		'app.pedido'
 	);

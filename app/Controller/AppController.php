@@ -31,4 +31,50 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+  public $uses = array('User');
+
+	public $components = array(
+		'Session',
+		'Auth' => array(
+			'loginAction' => array(
+				'admin' => FALSE,
+				'controller' => 'users',
+				'action' => 'login'
+			),
+			'loginRedirect' => array(
+				'controller' => 'productos',
+				'action' => 'index'
+			),
+			'logoutRedirect' => array(
+				'admin' => FALSE,
+				'controller' => 'users',
+				'action' => 'login'
+			),
+			'authorize' => array('Controller'),
+		),
+	);
+
+	public function beforeFilter() {
+		# Using the session's user id is fine because it doesn't change/update
+		$id = $this->Auth->user('id');
+		$userData = $this->User->findById($id);
+
+		$this -> layout = 'default';
+		$this->set('userData', $userData);
+	}
+
+	public function beforeRender() {
+		parent::beforeRender();
+		if($this->name == 'CakeError') $this->layout = 'default_error';
+	}
+
+	public function isAuthorized($user = null) {
+		# Admin users can:
+		if ($user['Rol']['weight'] >= User::ADMIN)
+			# Access to actions that start with admin_
+			if (strpos($this->action, 'admin_') === 0) return true;
+
+		# Default deny
+		return false;
+	}
 }

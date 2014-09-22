@@ -8,6 +8,42 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+	/**************************************************************************************************************
+	* Authentication
+	**************************************************************************************************************/
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow();
+	}
+
+	public function isAuthorized($user = null) {
+		$owner_allowed = array();
+		$user_allowed = array();
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array());
+
+		# All registered users can:
+		if (in_array($this->action, $user_allowed))
+			return true;
+
+		# Admin users can:
+		// if ($user['rol'] === 'admin')
+		if ($user['Rol']['weight'] >= $this->User->ADMIN)
+			if (in_array($this->action, $admin_allowed))
+				return true;
+
+		# The owner of an user can:
+		if (in_array($this->action, $owner_allowed)) {
+			$userId = $this->request->params['pass'][0];
+			if ($this->Event->isOwnedBy($userId, $user['id']))
+				return true;
+		}
+
+		return parent::isAuthorized($user);
+	}
+	/**************************************************************************************************************
+	* /authentication
+	**************************************************************************************************************/
+
 /**
  * Components
  *
@@ -23,6 +59,28 @@ class UsersController extends AppController {
 	public function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
+	}
+
+	public function login() {
+		$this -> layout = 'login';
+
+		if ($this->request->is('post')) {
+			if (isset($this->request->data['User'])) {
+				$user = $this->request->data['User'];
+
+				if ($this->Auth->login()) {
+					$this->redirect($this->Auth->redirect());
+				}
+				$this->redirect('/');
+			}
+			$this->Session->setFlash(__('Invalid username or password, try again'));
+			$this->redirect('/');
+		}
+	}
+
+	public function logout() {
+		# Logout según Cakephp
+		$this->redirect($this->Auth->logout());
 	}
 
 /**

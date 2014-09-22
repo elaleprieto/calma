@@ -6,6 +6,16 @@
 			<?php echo h($producto['Producto']['id']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Codigo'); ?></dt>
+		<dd>
+			<?php echo h($producto['Producto']['codigo']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Barra'); ?></dt>
+		<dd>
+			<?php echo h($producto['Producto']['barra']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Orden'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['orden']); ?>

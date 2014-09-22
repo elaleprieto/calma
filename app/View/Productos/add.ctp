@@ -3,6 +3,8 @@
 	<fieldset>
 		<legend><?php echo __('Add Producto'); ?></legend>
 	<?php
+		echo $this->Form->input('codigo');
+		echo $this->Form->input('barra');
 		echo $this->Form->input('orden');
 		echo $this->Form->input('detalle');
 		echo $this->Form->input('unidad');
