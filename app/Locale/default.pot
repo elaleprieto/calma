@@ -1,0 +1,1939 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-08-19 18:38-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/ChecksController.php:37;71;98
+msgid "Invalid check"
+msgstr ""
+
+#: Controller/ChecksController.php:52;75
+msgid "The check has been saved."
+msgstr ""
+
+#: Controller/ChecksController.php:55;78
+msgid "The check could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ChecksController.php:102
+msgid "The check has been deleted."
+msgstr ""
+
+#: Controller/ChecksController.php:104
+msgid "The check could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/CompaniesController.php:37;69;94
+msgid "Invalid company"
+msgstr ""
+
+#: Controller/CompaniesController.php:52;73
+msgid "The company has been saved."
+msgstr ""
+
+#: Controller/CompaniesController.php:55;76
+msgid "The company could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CompaniesController.php:98
+msgid "The company has been deleted."
+msgstr ""
+
+#: Controller/CompaniesController.php:100
+msgid "The company could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/DoctypesController.php:37;69;94
+msgid "Invalid doctype"
+msgstr ""
+
+#: Controller/DoctypesController.php:52;73
+msgid "The doctype has been saved."
+msgstr ""
+
+#: Controller/DoctypesController.php:55;76
+msgid "The doctype could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/DoctypesController.php:98
+msgid "The doctype has been deleted."
+msgstr ""
+
+#: Controller/DoctypesController.php:100
+msgid "The doctype could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/EstatesController.php:76;124;165;195;230;258
+msgid "Invalid estate"
+msgstr ""
+
+#: Controller/EstatesController.php:91;128;210;234
+msgid "The estate has been saved."
+msgstr ""
+
+#: Controller/EstatesController.php:94;131;213;237
+msgid "The estate could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/EstatesController.php:169;262
+msgid "The estate has been deleted."
+msgstr ""
+
+#: Controller/EstatesController.php:171;264
+msgid "The estate could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/InmueblesController.php:77;135;181
+msgid "Invalid inmueble"
+msgstr ""
+
+#: Controller/InmueblesController.php:102;142
+msgid "The inmueble could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/InmueblesController.php:139
+msgid "The inmueble has been saved."
+msgstr ""
+
+#: Controller/InmueblesController.php:186
+msgid "The inmueble has been deleted."
+msgstr ""
+
+#: Controller/InmueblesController.php:188
+msgid "The inmueble could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/InvoicesController.php:82;331;358;388;422;449
+msgid "Invalid invoice"
+msgstr ""
+
+#: Controller/InvoicesController.php:97;335;403;426
+msgid "The invoice has been saved."
+msgstr ""
+
+#: Controller/InvoicesController.php:100;169;274;338;406;429
+msgid "The invoice could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/InvoicesController.php:362;453
+msgid "The invoice has been deleted."
+msgstr ""
+
+#: Controller/InvoicesController.php:364;455
+msgid "The invoice could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/IvasController.php:37;69;94
+msgid "Invalid iva"
+msgstr ""
+
+#: Controller/IvasController.php:52;73
+msgid "The iva has been saved."
+msgstr ""
+
+#: Controller/IvasController.php:55;76
+msgid "The iva could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/IvasController.php:98
+msgid "The iva has been deleted."
+msgstr ""
+
+#: Controller/IvasController.php:100
+msgid "The iva could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/IvatypesController.php:37;69;94
+msgid "Invalid ivatype"
+msgstr ""
+
+#: Controller/IvatypesController.php:52;73
+msgid "The ivatype has been saved."
+msgstr ""
+
+#: Controller/IvatypesController.php:55;76
+msgid "The ivatype could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/IvatypesController.php:98
+msgid "The ivatype has been deleted."
+msgstr ""
+
+#: Controller/IvatypesController.php:100
+msgid "The ivatype could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/LoteosController.php:75;141;191
+msgid "Invalid loteo"
+msgstr ""
+
+#: Controller/LoteosController.php:100;148
+msgid "The loteo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/LoteosController.php:145
+msgid "The loteo has been saved."
+msgstr ""
+
+#: Controller/LoteosController.php:196
+msgid "The loteo has been deleted."
+msgstr ""
+
+#: Controller/LoteosController.php:198
+msgid "The loteo could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/NotascreditosController.php:74;143;171
+msgid "The notascredito has been saved."
+msgstr ""
+
+#: Controller/NotascreditosController.php:77;146;174
+msgid "The notascredito could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/NotascreditosController.php:128;167;199
+msgid "Invalid notascredito"
+msgstr ""
+
+#: Controller/NotascreditosController.php:203
+msgid "The notascredito has been deleted."
+msgstr ""
+
+#: Controller/NotascreditosController.php:205
+msgid "The notascredito could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/OwnersController.php:76;118;145
+msgid "Invalid owner"
+msgstr ""
+
+#: Controller/OwnersController.php:98;122
+msgid "The owner has been saved."
+msgstr ""
+
+#: Controller/OwnersController.php:101;125
+msgid "The owner could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OwnersController.php:149
+msgid "The owner has been deleted."
+msgstr ""
+
+#: Controller/OwnersController.php:151
+msgid "The owner could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PaymentconditionsController.php:74;106;131
+msgid "Invalid paymentcondition"
+msgstr ""
+
+#: Controller/PaymentconditionsController.php:89;110
+msgid "The paymentcondition has been saved."
+msgstr ""
+
+#: Controller/PaymentconditionsController.php:92;113
+msgid "The paymentcondition could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PaymentconditionsController.php:135
+msgid "The paymentcondition has been deleted."
+msgstr ""
+
+#: Controller/PaymentconditionsController.php:137
+msgid "The paymentcondition could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PeopleController.php:75;109;137
+msgid "Invalid person"
+msgstr ""
+
+#: Controller/PeopleController.php:90;113
+msgid "The person has been saved."
+msgstr ""
+
+#: Controller/PeopleController.php:93;116
+msgid "The person could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PeopleController.php:141
+msgid "The person has been deleted."
+msgstr ""
+
+#: Controller/PeopleController.php:143
+msgid "The person could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RentersController.php:75;118;146
+msgid "Invalid renter"
+msgstr ""
+
+#: Controller/RentersController.php:97;122
+msgid "The renter has been saved."
+msgstr ""
+
+#: Controller/RentersController.php:100;125
+msgid "The renter could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RentersController.php:150
+msgid "The renter has been deleted."
+msgstr ""
+
+#: Controller/RentersController.php:152
+msgid "The renter could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RolsController.php:37;69;94
+msgid "Invalid rol"
+msgstr ""
+
+#: Controller/RolsController.php:52;73
+msgid "The rol has been saved."
+msgstr ""
+
+#: Controller/RolsController.php:55;76
+msgid "The rol could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RolsController.php:98
+msgid "The rol has been deleted."
+msgstr ""
+
+#: Controller/RolsController.php:100
+msgid "The rol could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:37;71;98
+msgid "Invalid type"
+msgstr ""
+
+#: Controller/TypesController.php:52;75
+msgid "The type has been saved."
+msgstr ""
+
+#: Controller/TypesController.php:55;78
+msgid "The type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:102
+msgid "The type has been deleted."
+msgstr ""
+
+#: Controller/TypesController.php:104
+msgid "The type could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:75;109;136
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:90;113
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:93;116
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:140
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:142
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:159
+msgid "Invalid username or password, try again"
+msgstr ""
+
+#: View/Checks/add.ctp:4
+msgid "Add Check"
+msgstr ""
+
+#: View/Checks/add.ctp:13
+#: View/Checks/edit.ctp:14
+#: View/Companies/add.ctp:10
+#: View/Companies/edit.ctp:11
+#: View/Doctypes/add.ctp:10
+#: View/Doctypes/edit.ctp:11
+#: View/Estates/add.ctp:88;117
+#: View/Estates/edit.ctp:97
+#: View/Inmuebles/add.ctp:88;117;145
+#: View/Inmuebles/edit.ctp:98;130
+#: View/Invoices/add.ctp:18
+#: View/Invoices/edit.ctp:52
+#: View/Items/add.ctp:12
+#: View/Items/edit.ctp:13
+#: View/Ivas/add.ctp:9
+#: View/Ivas/edit.ctp:10
+#: View/Ivatypes/add.ctp:11
+#: View/Ivatypes/edit.ctp:12
+#: View/Loteos/add.ctp:160;185
+#: View/Loteos/edit.ctp:163;189
+#: View/Notascreditos/add.ctp:261
+#: View/Notascreditos/edit.ctp:51
+#: View/Notascreditos/nueva.ctp:250
+#: View/Owners/add.ctp:61
+#: View/Owners/edit.ctp:64
+#: View/Paymentconditions/add.ctp:10
+#: View/Paymentconditions/edit.ctp:11
+#: View/People/add.ctp:14
+#: View/People/edit.ctp:15
+#: View/Renters/add.ctp:76
+#: View/Renters/edit.ctp:79
+#: View/Rols/add.ctp:11
+#: View/Rols/edit.ctp:12
+#: View/Types/add.ctp:10
+#: View/Types/edit.ctp:11
+#: View/Users/add.ctp:12
+#: View/Users/edit.ctp:13
+msgid "Submit"
+msgstr ""
+
+#: View/Checks/add.ctp:16
+#: View/Checks/edit.ctp:17
+#: View/Checks/index.ctp:13;50
+#: View/Checks/view.ctp:47
+#: View/Companies/add.ctp:13
+#: View/Companies/edit.ctp:14
+#: View/Companies/index.ctp:10;42
+#: View/Companies/view.ctp:32;60
+#: View/Doctypes/add.ctp:13
+#: View/Doctypes/edit.ctp:14
+#: View/Doctypes/index.ctp:10;42
+#: View/Doctypes/view.ctp:32
+#: View/Estates/index.ctp:13
+#: View/Inmuebles/add.ctp:148
+#: View/Inmuebles/edit.ctp:133
+#: View/Inmuebles/index.ctp:13;75;108
+#: View/Inmuebles/view.ctp:83
+#: View/Invoices/add.ctp:22
+#: View/Invoices/index.ctp:12
+#: View/Invoices/view.ctp:72;96
+#: View/Items/add.ctp:16
+#: View/Items/edit.ctp:17
+#: View/Items/index.ctp:12;49
+#: View/Items/view.ctp:43
+#: View/Ivas/add.ctp:12
+#: View/Ivas/edit.ctp:13
+#: View/Ivas/index.ctp:9;40
+#: View/Ivas/view.ctp:27;55
+#: View/Ivatypes/add.ctp:14
+#: View/Ivatypes/edit.ctp:15
+#: View/Ivatypes/index.ctp:11;44
+#: View/Ivatypes/view.ctp:37;94
+#: View/Loteos/add.ctp:188
+#: View/Loteos/edit.ctp:192
+#: View/Loteos/index.ctp:10
+#: View/Loteos/view.ctp:42
+#: View/Notascreditos/add.ctp:264
+#: View/Notascreditos/edit.ctp:54
+#: View/Notascreditos/index.ctp:12;117;201
+#: View/Notascreditos/nueva.ctp:253
+#: View/Notascreditos/view.ctp:232
+#: View/Owners/index.ctp:11
+#: View/Owners/view.ctp:49
+#: View/Paymentconditions/add.ctp:13
+#: View/Paymentconditions/edit.ctp:14
+#: View/Paymentconditions/index.ctp:10;42
+#: View/Paymentconditions/view.ctp:32;83
+#: View/People/edit.ctp:18
+#: View/People/index.ctp:14;52
+#: View/People/view.ctp:72;93
+#: View/Renters/index.ctp:10
+#: View/Renters/view.ctp:49
+#: View/Rols/add.ctp:14
+#: View/Rols/edit.ctp:15
+#: View/Rols/index.ctp:11;44
+#: View/Rols/view.ctp:37;59
+#: View/Types/add.ctp:13
+#: View/Types/edit.ctp:14
+#: View/Types/index.ctp:10;42
+#: View/Types/view.ctp:32
+#: View/Users/add.ctp:15
+#: View/Users/edit.ctp:16
+#: View/Users/index.ctp:12;48
+#: View/Users/view.ctp:42
+msgid "Actions"
+msgstr ""
+
+#: View/Checks/add.ctp:19
+#: View/Checks/edit.ctp:21
+#: View/Checks/view.ctp:51
+msgid "List Checks"
+msgstr ""
+
+#: View/Checks/add.ctp:20
+#: View/Checks/edit.ctp:22
+#: View/Checks/index.ctp:53
+#: View/Checks/view.ctp:53
+#: View/Elements/menu.ctp:18
+#: View/Invoices/add.ctp:25
+#: View/Invoices/view.ctp:76
+#: View/Items/add.ctp:20
+#: View/Items/edit.ctp:22
+#: View/Items/index.ctp:52
+#: View/Items/view.ctp:49
+#: View/Ivatypes/add.ctp:18
+#: View/Ivatypes/edit.ctp:20
+#: View/Ivatypes/index.ctp:47
+#: View/Ivatypes/view.ctp:43
+#: View/Layouts/default.ctp:77
+#: View/Paymentconditions/add.ctp:17
+#: View/Paymentconditions/edit.ctp:19
+#: View/Paymentconditions/index.ctp:45
+#: View/Paymentconditions/view.ctp:38
+#: View/Types/add.ctp:17
+#: View/Types/edit.ctp:19
+#: View/Types/index.ctp:45
+#: View/Types/view.ctp:38
+msgid "List Invoices"
+msgstr ""
+
+#: View/Checks/add.ctp:21
+#: View/Checks/edit.ctp:23
+#: View/Checks/index.ctp:54
+#: View/Checks/view.ctp:54
+#: View/Elements/menu.ctp:19
+#: View/Invoices/view.ctp:77
+#: View/Items/add.ctp:21
+#: View/Items/edit.ctp:23
+#: View/Items/index.ctp:53
+#: View/Items/view.ctp:50
+#: View/Ivatypes/add.ctp:19
+#: View/Ivatypes/edit.ctp:21
+#: View/Ivatypes/index.ctp:48
+#: View/Ivatypes/view.ctp:44;152
+#: View/Paymentconditions/add.ctp:18
+#: View/Paymentconditions/edit.ctp:20
+#: View/Paymentconditions/index.ctp:46
+#: View/Paymentconditions/view.ctp:39;135
+#: View/Types/add.ctp:18
+#: View/Types/edit.ctp:20
+#: View/Types/index.ctp:46
+#: View/Types/view.ctp:39
+msgid "New Invoice"
+msgstr ""
+
+#: View/Checks/edit.ctp:4
+#: View/Checks/view.ctp:49
+msgid "Edit Check"
+msgstr ""
+
+#: View/Checks/edit.ctp:20
+#: View/Checks/index.ctp:30
+#: View/Companies/edit.ctp:17
+#: View/Companies/index.ctp:22
+#: View/Companies/view.ctp:80
+#: View/Doctypes/edit.ctp:17
+#: View/Doctypes/index.ctp:22
+#: View/Estates/index.ctp:45
+#: View/Inmuebles/edit.ctp:136
+#: View/Inmuebles/index.ctp:46;88
+#: View/Invoices/view.ctp:110
+#: View/Items/edit.ctp:20
+#: View/Items/index.ctp:28
+#: View/Ivas/edit.ctp:16
+#: View/Ivas/index.ctp:20
+#: View/Ivas/view.ctp:75
+#: View/Ivatypes/edit.ctp:18
+#: View/Ivatypes/index.ctp:24
+#: View/Ivatypes/view.ctp:143
+#: View/Loteos/edit.ctp:195
+#: View/Loteos/index.ctp:24
+#: View/Notascreditos/edit.ctp:57
+#: View/Notascreditos/index.ctp:181
+#: View/Owners/index.ctp:23
+#: View/Owners/view.ctp:77
+#: View/Paymentconditions/edit.ctp:17
+#: View/Paymentconditions/index.ctp:22
+#: View/Paymentconditions/view.ctp:126
+#: View/People/edit.ctp:21
+#: View/People/index.ctp:32
+#: View/People/view.ctp:104
+#: View/Renters/index.ctp:21
+#: View/Renters/view.ctp:65
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:73
+#: View/Types/edit.ctp:17
+#: View/Types/index.ctp:22
+#: View/Users/edit.ctp:19
+#: View/Users/index.ctp:28
+msgid "Delete"
+msgstr ""
+
+#: View/Checks/edit.ctp:20
+#: View/Checks/index.ctp:30
+#: View/Checks/view.ctp:50
+#: View/Companies/edit.ctp:17
+#: View/Companies/index.ctp:22
+#: View/Companies/view.ctp:35;80
+#: View/Doctypes/edit.ctp:17
+#: View/Doctypes/index.ctp:22
+#: View/Doctypes/view.ctp:35
+#: View/Estates/index.ctp:45
+#: View/Inmuebles/edit.ctp:136
+#: View/Inmuebles/index.ctp:46;88
+#: View/Inmuebles/view.ctp:86
+#: View/Invoices/view.ctp:75;110
+#: View/Items/edit.ctp:20
+#: View/Items/index.ctp:28
+#: View/Items/view.ctp:46
+#: View/Ivas/edit.ctp:16
+#: View/Ivas/index.ctp:20
+#: View/Ivas/view.ctp:30;75
+#: View/Ivatypes/edit.ctp:18
+#: View/Ivatypes/index.ctp:24
+#: View/Ivatypes/view.ctp:40;143
+#: View/Loteos/edit.ctp:195
+#: View/Loteos/index.ctp:24
+#: View/Loteos/view.ctp:45
+#: View/Notascreditos/edit.ctp:57
+#: View/Notascreditos/index.ctp:181
+#: View/Notascreditos/view.ctp:235
+#: View/Owners/index.ctp:23
+#: View/Owners/view.ctp:77
+#: View/Paymentconditions/edit.ctp:17
+#: View/Paymentconditions/index.ctp:22
+#: View/Paymentconditions/view.ctp:35;126
+#: View/People/edit.ctp:21
+#: View/People/index.ctp:32
+#: View/People/view.ctp:75;104
+#: View/Renters/index.ctp:21
+#: View/Renters/view.ctp:65
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:40;73
+#: View/Types/edit.ctp:17
+#: View/Types/index.ctp:22
+#: View/Types/view.ctp:35
+#: View/Users/edit.ctp:19
+#: View/Users/index.ctp:28
+#: View/Users/view.ctp:45
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Checks/index.ctp:2
+msgid "Checks"
+msgstr ""
+
+#: View/Checks/index.ctp:28
+#: View/Companies/index.ctp:20
+#: View/Companies/view.ctp:78
+#: View/Doctypes/index.ctp:20
+#: View/Estates/index.ctp:43
+#: View/Inmuebles/index.ctp:44;86
+#: View/Invoices/view.ctp:108
+#: View/Items/index.ctp:26
+#: View/Ivas/index.ctp:18
+#: View/Ivas/view.ctp:73
+#: View/Ivatypes/index.ctp:22
+#: View/Ivatypes/view.ctp:141
+#: View/Loteos/index.ctp:22
+#: View/Notascreditos/index.ctp:179
+#: View/Owners/index.ctp:21
+#: View/Owners/view.ctp:75
+#: View/Paymentconditions/index.ctp:20
+#: View/Paymentconditions/view.ctp:124
+#: View/People/index.ctp:30
+#: View/People/view.ctp:102
+#: View/Renters/index.ctp:19
+#: View/Renters/view.ctp:63
+#: View/Rols/index.ctp:22
+#: View/Rols/view.ctp:71
+#: View/Types/index.ctp:20
+#: View/Users/index.ctp:26
+msgid "View"
+msgstr ""
+
+#: View/Checks/index.ctp:29
+#: View/Companies/index.ctp:21
+#: View/Companies/view.ctp:79
+#: View/Doctypes/index.ctp:21
+#: View/Estates/index.ctp:44
+#: View/Inmuebles/index.ctp:45;87
+#: View/Invoices/view.ctp:109
+#: View/Items/index.ctp:27
+#: View/Ivas/index.ctp:19
+#: View/Ivas/view.ctp:74
+#: View/Ivatypes/index.ctp:23
+#: View/Ivatypes/view.ctp:142
+#: View/Loteos/index.ctp:23
+#: View/Notascreditos/index.ctp:180
+#: View/Owners/index.ctp:22
+#: View/Owners/view.ctp:76
+#: View/Paymentconditions/index.ctp:21
+#: View/Paymentconditions/view.ctp:125
+#: View/People/index.ctp:31
+#: View/People/view.ctp:103
+#: View/Renters/index.ctp:20
+#: View/Renters/view.ctp:64
+#: View/Rols/index.ctp:23
+#: View/Rols/view.ctp:72
+#: View/Types/index.ctp:21
+#: View/Users/index.ctp:27
+msgid "Edit"
+msgstr ""
+
+#: View/Checks/index.ctp:38
+#: View/Companies/index.ctp:30
+#: View/Doctypes/index.ctp:30
+#: View/Elements/paginator.ctp:4
+#: View/Inmuebles/index.ctp:96
+#: View/Items/index.ctp:36
+#: View/Ivas/index.ctp:28
+#: View/Ivatypes/index.ctp:32
+#: View/Notascreditos/index.ctp:189
+#: View/Paymentconditions/index.ctp:30
+#: View/People/index.ctp:40
+#: View/Rols/index.ctp:32
+#: View/Types/index.ctp:30
+#: View/Users/index.ctp:36
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Checks/index.ctp:43
+#: View/Companies/index.ctp:35
+#: View/Doctypes/index.ctp:35
+#: View/Elements/paginator.ctp:10
+#: View/Inmuebles/index.ctp:101
+#: View/Items/index.ctp:41
+#: View/Ivas/index.ctp:33
+#: View/Ivatypes/index.ctp:37
+#: View/Notascreditos/index.ctp:194
+#: View/Paymentconditions/index.ctp:35
+#: View/People/index.ctp:45
+#: View/Rols/index.ctp:37
+#: View/Types/index.ctp:35
+#: View/Users/index.ctp:41
+msgid "previous"
+msgstr ""
+
+#: View/Checks/index.ctp:45
+#: View/Companies/index.ctp:37
+#: View/Doctypes/index.ctp:37
+#: View/Elements/paginator.ctp:12
+#: View/Inmuebles/index.ctp:103
+#: View/Items/index.ctp:43
+#: View/Ivas/index.ctp:35
+#: View/Ivatypes/index.ctp:39
+#: View/Notascreditos/index.ctp:196
+#: View/Paymentconditions/index.ctp:37
+#: View/People/index.ctp:47
+#: View/Rols/index.ctp:39
+#: View/Types/index.ctp:37
+#: View/Users/index.ctp:43
+msgid "next"
+msgstr ""
+
+#: View/Checks/index.ctp:52
+#: View/Checks/view.ctp:52
+msgid "New Check"
+msgstr ""
+
+#: View/Checks/view.ctp:2
+msgid "Check"
+msgstr ""
+
+#: View/Checks/view.ctp:4
+#: View/Companies/view.ctp:4;47
+#: View/Doctypes/view.ctp:4
+#: View/Inmuebles/view.ctp:60
+#: View/Invoices/view.ctp:4;89
+#: View/Items/view.ctp:4
+#: View/Ivas/view.ctp:4;42
+#: View/Ivatypes/view.ctp:4;52
+#: View/Loteos/view.ctp:4
+#: View/Notascreditos/view.ctp:4
+#: View/Paymentconditions/view.ctp:4;47
+#: View/People/view.ctp:4;89
+#: View/Rols/view.ctp:4;52
+#: View/Types/view.ctp:4
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Checks/view.ctp:9
+#: View/Companies/view.ctp:9;49
+#: View/Doctypes/view.ctp:14
+#: View/Estates/view.ctp:9
+#: View/Inmuebles/view.ctp:9
+#: View/Invoices/view.ctp:9
+#: View/Ivas/view.ctp:9;43
+#: View/Ivatypes/view.ctp:14;57
+#: View/Notascreditos/view.ctp:29
+#: View/Owners/view.ctp:43
+#: View/Paymentconditions/view.ctp:9;50
+#: View/People/view.ctp:9
+#: View/Renters/view.ctp:43
+#: View/Rols/view.ctp:9;55
+#: View/Types/view.ctp:9
+#: View/Users/view.ctp:19
+msgid "Name"
+msgstr ""
+
+#: View/Checks/view.ctp:14
+#: View/Ivatypes/view.ctp:53
+#: View/Loteos/view.ctp:9
+#: View/Notascreditos/view.ctp:9
+#: View/Paymentconditions/view.ctp:48
+msgid "Number"
+msgstr ""
+
+#: View/Checks/view.ctp:19
+msgid "Bank"
+msgstr ""
+
+#: View/Checks/view.ctp:24
+#: View/Ivatypes/view.ctp:19
+msgid "Amount"
+msgstr ""
+
+#: View/Checks/view.ctp:29
+#: View/Companies/view.ctp:19;55
+#: View/Doctypes/view.ctp:19
+#: View/Inmuebles/view.ctp:65
+#: View/Invoices/view.ctp:54;93
+#: View/Items/view.ctp:24
+#: View/Ivas/view.ctp:14;52
+#: View/Ivatypes/view.ctp:24;88
+#: View/Loteos/view.ctp:24
+#: View/Notascreditos/view.ctp:194
+#: View/Paymentconditions/view.ctp:19;78
+#: View/People/view.ctp:54;90
+#: View/Rols/view.ctp:19;56
+#: View/Types/view.ctp:19
+#: View/Users/view.ctp:24
+msgid "Created"
+msgstr ""
+
+#: View/Checks/view.ctp:34
+#: View/Companies/view.ctp:24;56
+#: View/Doctypes/view.ctp:24
+#: View/Inmuebles/view.ctp:70
+#: View/Invoices/view.ctp:59;94
+#: View/Items/view.ctp:29
+#: View/Ivas/view.ctp:19;53
+#: View/Ivatypes/view.ctp:29;89
+#: View/Loteos/view.ctp:29
+#: View/Notascreditos/view.ctp:199
+#: View/Paymentconditions/view.ctp:24;79
+#: View/People/view.ctp:59;91
+#: View/Rols/view.ctp:24;57
+#: View/Types/view.ctp:24
+#: View/Users/view.ctp:29
+msgid "Modified"
+msgstr ""
+
+#: View/Checks/view.ctp:39
+#: View/Invoices/view.ctp:2
+#: View/Items/view.ctp:34
+msgid "Invoice"
+msgstr ""
+
+#: View/Checks/view.ctp:50
+msgid "Delete Check"
+msgstr ""
+
+#: View/Companies/add.ctp:4
+msgid "Add Company"
+msgstr ""
+
+#: View/Companies/add.ctp:16
+#: View/Companies/edit.ctp:18
+#: View/Companies/view.ctp:36
+#: View/Notascreditos/add.ctp:268
+#: View/Notascreditos/edit.ctp:59
+#: View/Notascreditos/index.ctp:204
+#: View/Notascreditos/nueva.ctp:257
+#: View/Notascreditos/view.ctp:238
+msgid "List Companies"
+msgstr ""
+
+#: View/Companies/add.ctp:17
+#: View/Companies/edit.ctp:19
+#: View/Companies/index.ctp:45
+#: View/Companies/view.ctp:38
+#: View/Elements/menu.ctp:13
+#: View/Inmuebles/add.ctp:152
+#: View/Inmuebles/edit.ctp:138
+#: View/Inmuebles/index.ctp:111
+#: View/Inmuebles/view.ctp:89
+#: View/Invoices/add.ctp:26
+#: View/Invoices/view.ctp:78
+#: View/Layouts/default.ctp:63
+#: View/Loteos/add.ctp:192
+#: View/Loteos/edit.ctp:197
+#: View/Loteos/view.ctp:48
+#: View/Notascreditos/add.ctp:272
+#: View/Notascreditos/edit.ctp:63
+#: View/Notascreditos/index.ctp:208
+#: View/Notascreditos/nueva.ctp:261
+#: View/Notascreditos/view.ctp:242
+msgid "List Estates"
+msgstr ""
+
+#: View/Companies/add.ctp:18
+#: View/Companies/edit.ctp:20
+#: View/Companies/index.ctp:46
+#: View/Companies/view.ctp:39;89
+#: View/Elements/menu.ctp:14
+#: View/Inmuebles/add.ctp:153
+#: View/Inmuebles/edit.ctp:139
+#: View/Inmuebles/index.ctp:112
+#: View/Inmuebles/view.ctp:90
+#: View/Layouts/default.ctp:62
+#: View/Loteos/add.ctp:193
+#: View/Loteos/edit.ctp:198
+#: View/Loteos/view.ctp:49
+#: View/Notascreditos/add.ctp:273
+#: View/Notascreditos/edit.ctp:64
+#: View/Notascreditos/index.ctp:209
+#: View/Notascreditos/nueva.ctp:262
+#: View/Notascreditos/view.ctp:243
+msgid "New Estate"
+msgstr ""
+
+#: View/Companies/edit.ctp:4
+#: View/Companies/view.ctp:34
+msgid "Edit Company"
+msgstr ""
+
+#: View/Companies/index.ctp:2
+msgid "Companies"
+msgstr ""
+
+#: View/Companies/index.ctp:44
+#: View/Companies/view.ctp:37
+#: View/Notascreditos/add.ctp:269
+#: View/Notascreditos/edit.ctp:60
+#: View/Notascreditos/index.ctp:205
+#: View/Notascreditos/nueva.ctp:258
+#: View/Notascreditos/view.ctp:239
+msgid "New Company"
+msgstr ""
+
+#: View/Companies/view.ctp:2
+#: View/Notascreditos/view.ctp:19
+msgid "Company"
+msgstr ""
+
+#: View/Companies/view.ctp:14
+#: View/Ivas/view.ctp:47
+#: View/Ivatypes/view.ctp:60
+#: View/Notascreditos/view.ctp:54
+#: View/Paymentconditions/view.ctp:53
+#: View/People/view.ctp:29
+msgid "Cuit"
+msgstr ""
+
+#: View/Companies/view.ctp:35
+msgid "Delete Company"
+msgstr ""
+
+#: View/Companies/view.ctp:43
+#: View/Owners/view.ctp:38
+#: View/Renters/view.ctp:38
+msgid "Related Estates"
+msgstr ""
+
+#: View/Companies/view.ctp:48
+#: View/Ivatypes/view.ctp:62
+#: View/Notascreditos/view.ctp:64
+#: View/Owners/view.ctp:42
+#: View/Paymentconditions/view.ctp:55
+#: View/Renters/view.ctp:42
+msgid "Ficha"
+msgstr ""
+
+#: View/Companies/view.ctp:50
+#: View/Estates/view.ctp:14
+#: View/Inmuebles/view.ctp:14
+#: View/Invoices/view.ctp:14
+#: View/Ivas/view.ctp:44
+#: View/Ivatypes/view.ctp:58
+#: View/Notascreditos/view.ctp:34
+#: View/Owners/view.ctp:44
+#: View/Paymentconditions/view.ctp:51
+#: View/People/view.ctp:14
+#: View/Renters/view.ctp:44
+msgid "Address"
+msgstr ""
+
+#: View/Companies/view.ctp:51
+#: View/Estates/view.ctp:19
+#: View/Inmuebles/view.ctp:19
+#: View/Invoices/view.ctp:92
+#: View/Items/view.ctp:19
+#: View/Ivatypes/view.ctp:64
+#: View/Notascreditos/view.ctp:74
+#: View/Owners/view.ctp:45
+#: View/Paymentconditions/view.ctp:56
+#: View/Renters/view.ctp:45
+msgid "Price"
+msgstr ""
+
+#: View/Companies/view.ctp:52
+#: View/Ivatypes/view.ctp:66
+#: View/Notascreditos/view.ctp:84
+#: View/Paymentconditions/view.ctp:58
+msgid "Insurance"
+msgstr ""
+
+#: View/Companies/view.ctp:53
+#: View/Estates/view.ctp:24
+#: View/Inmuebles/view.ctp:24
+#: View/Invoices/view.ctp:39
+#: View/Ivatypes/view.ctp:78
+#: View/Notascreditos/view.ctp:144
+#: View/Owners/view.ctp:46
+#: View/Paymentconditions/view.ctp:70
+#: View/Renters/view.ctp:46
+msgid "Contract Start"
+msgstr ""
+
+#: View/Companies/view.ctp:54
+#: View/Estates/view.ctp:29
+#: View/Inmuebles/view.ctp:29
+#: View/Invoices/view.ctp:44
+#: View/Ivatypes/view.ctp:79
+#: View/Notascreditos/view.ctp:149
+#: View/Owners/view.ctp:47
+#: View/Paymentconditions/view.ctp:71
+#: View/Renters/view.ctp:47
+msgid "Contract End"
+msgstr ""
+
+#: View/Companies/view.ctp:57
+#: View/Ivatypes/view.ctp:55
+msgid "Company Id"
+msgstr ""
+
+#: View/Companies/view.ctp:58
+msgid "Owner Id"
+msgstr ""
+
+#: View/Companies/view.ctp:59
+msgid "Renter Id"
+msgstr ""
+
+#: View/Doctypes/add.ctp:4
+msgid "Add Doctype"
+msgstr ""
+
+#: View/Doctypes/add.ctp:16
+#: View/Doctypes/edit.ctp:18
+#: View/Doctypes/view.ctp:36
+#: View/Notascreditos/add.ctp:270
+#: View/Notascreditos/edit.ctp:61
+#: View/Notascreditos/index.ctp:206
+#: View/Notascreditos/nueva.ctp:259
+#: View/Notascreditos/view.ctp:240
+msgid "List Doctypes"
+msgstr ""
+
+#: View/Doctypes/edit.ctp:4
+#: View/Doctypes/view.ctp:34
+msgid "Edit Doctype"
+msgstr ""
+
+#: View/Doctypes/index.ctp:2
+msgid "Doctypes"
+msgstr ""
+
+#: View/Doctypes/index.ctp:44
+#: View/Doctypes/view.ctp:37
+#: View/Notascreditos/add.ctp:271
+#: View/Notascreditos/edit.ctp:62
+#: View/Notascreditos/index.ctp:207
+#: View/Notascreditos/nueva.ctp:260
+#: View/Notascreditos/view.ctp:241
+msgid "New Doctype"
+msgstr ""
+
+#: View/Doctypes/view.ctp:2
+#: View/Notascreditos/view.ctp:204
+msgid "Doctype"
+msgstr ""
+
+#: View/Doctypes/view.ctp:9
+#: View/Ivatypes/view.ctp:9
+#: View/Paymentconditions/view.ctp:14
+#: View/Types/view.ctp:14
+msgid "Code"
+msgstr ""
+
+#: View/Doctypes/view.ctp:35
+msgid "Delete Doctype"
+msgstr ""
+
+#: View/Elements/menu.ctp:5
+#: View/Layouts/default.ctp:49
+#: View/People/edit.ctp:25
+#: View/People/index.ctp:57
+#: View/People/view.ctp:80
+msgid "List Owners"
+msgstr ""
+
+#: View/Elements/menu.ctp:6
+#: View/Layouts/default.ctp:48
+#: View/People/edit.ctp:26
+#: View/People/index.ctp:58
+#: View/People/view.ctp:81;113
+msgid "New Owner"
+msgstr ""
+
+#: View/Elements/menu.ctp:9
+#: View/Layouts/default.ctp:56
+msgid "List Renters"
+msgstr ""
+
+#: View/Elements/menu.ctp:10
+#: View/Layouts/default.ctp:55
+msgid "New Renter"
+msgstr ""
+
+#: View/Estates/add.ctp:5;105
+#: View/Inmuebles/add.ctp:5;105
+msgid "Add Estate"
+msgstr ""
+
+#: View/Estates/edit.ctp:5
+#: View/Inmuebles/edit.ctp:5
+#: View/Loteos/edit.ctp:7
+msgid "Edit Estate"
+msgstr ""
+
+#: View/Estates/index.ctp:2
+#: View/Inmuebles/index.ctp:2
+#: View/Invoices/view.ctp:64
+msgid "Estates"
+msgstr ""
+
+#: View/Estates/view.ctp:2
+#: View/Inmuebles/view.ctp:2;75
+#: View/Loteos/view.ctp:34
+#: View/Notascreditos/view.ctp:209
+msgid "Estate"
+msgstr ""
+
+#: View/Estates/view.ctp:4
+#: View/Inmuebles/view.ctp:4
+msgid "ficha"
+msgstr ""
+
+#: View/Estates/view.ctp:34
+#: View/Inmuebles/view.ctp:34
+#: View/Invoices/view.ctp:19
+#: View/Ivatypes/view.ctp:61
+#: View/Notascreditos/view.ctp:59
+#: View/Owners/view.ctp:3
+#: View/Paymentconditions/view.ctp:54
+#: View/Renters/view.ctp:48
+msgid "Owner"
+msgstr ""
+
+#: View/Estates/view.ctp:39
+#: View/Inmuebles/view.ctp:39
+#: View/Owners/view.ctp:48
+#: View/Renters/view.ctp:2
+msgid "Renter"
+msgstr ""
+
+#: View/Inmuebles/add.ctp:140
+msgid "Add Inmueble"
+msgstr ""
+
+#: View/Inmuebles/add.ctp:151
+#: View/Inmuebles/edit.ctp:137
+#: View/Inmuebles/view.ctp:87
+msgid "List Inmuebles"
+msgstr ""
+
+#: View/Inmuebles/edit.ctp:124
+#: View/Inmuebles/view.ctp:85
+msgid "Edit Inmueble"
+msgstr ""
+
+#: View/Inmuebles/index.ctp:68
+msgid "Inmuebles"
+msgstr ""
+
+#: View/Inmuebles/index.ctp:110
+#: View/Inmuebles/view.ctp:88
+msgid "New Inmueble"
+msgstr ""
+
+#: View/Inmuebles/view.ctp:58
+msgid "Inmueble"
+msgstr ""
+
+#: View/Inmuebles/view.ctp:86
+msgid "Delete Inmueble"
+msgstr ""
+
+#: View/Invoices/add.ctp:4
+#: View/Invoices/nueva.ctp:21
+msgid "Add Invoice"
+msgstr ""
+
+#: View/Invoices/add.ctp:27
+#: View/Invoices/view.ctp:79
+msgid "New Estates"
+msgstr ""
+
+#: View/Invoices/add.ctp:28
+#: View/Invoices/view.ctp:80
+#: View/Items/add.ctp:19
+#: View/Items/edit.ctp:21
+#: View/Items/view.ctp:47
+msgid "List Items"
+msgstr ""
+
+#: View/Invoices/add.ctp:29
+#: View/Invoices/view.ctp:81;119
+#: View/Items/index.ctp:51
+#: View/Items/view.ctp:48
+msgid "New Item"
+msgstr ""
+
+#: View/Invoices/edit.ctp:5
+#: View/Invoices/view.ctp:74
+msgid "Edit Invoice"
+msgstr ""
+
+#: View/Invoices/index.ctp:2
+msgid "Invoices"
+msgstr ""
+
+#: View/Invoices/view.ctp:24
+#: View/Ivatypes/view.ctp:70
+#: View/Notascreditos/view.ctp:104
+#: View/Paymentconditions/view.ctp:62
+msgid "Subtotal"
+msgstr ""
+
+#: View/Invoices/view.ctp:29
+#: View/Ivas/view.ctp:2
+#: View/Ivatypes/view.ctp:67
+#: View/Notascreditos/view.ctp:89
+#: View/Paymentconditions/view.ctp:59
+#: View/People/view.ctp:64
+msgid "Iva"
+msgstr ""
+
+#: View/Invoices/view.ctp:34
+#: View/Ivatypes/view.ctp:77
+#: View/Notascreditos/view.ctp:139
+#: View/Paymentconditions/view.ctp:69
+msgid "Total"
+msgstr ""
+
+#: View/Invoices/view.ctp:49
+#: View/Ivatypes/view.ctp:86
+#: View/Notascreditos/view.ctp:184
+#: View/Paymentconditions/view.ctp:76
+msgid "Cae"
+msgstr ""
+
+#: View/Invoices/view.ctp:75
+msgid "Delete Invoice"
+msgstr ""
+
+#: View/Invoices/view.ctp:85
+msgid "Related Items"
+msgstr ""
+
+#: View/Invoices/view.ctp:90
+#: View/Items/view.ctp:9
+msgid "Detail"
+msgstr ""
+
+#: View/Invoices/view.ctp:91
+#: View/Items/view.ctp:14
+msgid "Quantity"
+msgstr ""
+
+#: View/Invoices/view.ctp:95
+msgid "Invoice Id"
+msgstr ""
+
+#: View/Items/add.ctp:4
+msgid "Add Item"
+msgstr ""
+
+#: View/Items/edit.ctp:4
+#: View/Items/view.ctp:45
+msgid "Edit Item"
+msgstr ""
+
+#: View/Items/index.ctp:2
+msgid "Items"
+msgstr ""
+
+#: View/Items/view.ctp:2
+msgid "Item"
+msgstr ""
+
+#: View/Items/view.ctp:46
+msgid "Delete Item"
+msgstr ""
+
+#: View/Ivas/add.ctp:4
+msgid "Add Iva"
+msgstr ""
+
+#: View/Ivas/add.ctp:15
+#: View/Ivas/edit.ctp:17
+#: View/Ivas/view.ctp:31
+#: View/People/edit.ctp:23
+#: View/People/index.ctp:55
+#: View/People/view.ctp:78
+msgid "List Ivas"
+msgstr ""
+
+#: View/Ivas/add.ctp:16
+#: View/Ivas/edit.ctp:18
+#: View/Ivas/index.ctp:43
+#: View/Ivas/view.ctp:33
+#: View/People/edit.ctp:22
+#: View/People/view.ctp:76
+msgid "List People"
+msgstr ""
+
+#: View/Ivas/add.ctp:17
+#: View/Ivas/edit.ctp:19
+#: View/Ivas/index.ctp:44
+#: View/Ivas/view.ctp:34;84
+#: View/People/index.ctp:54
+#: View/People/view.ctp:77
+msgid "New Person"
+msgstr ""
+
+#: View/Ivas/edit.ctp:4
+#: View/Ivas/view.ctp:29
+msgid "Edit Iva"
+msgstr ""
+
+#: View/Ivas/index.ctp:2
+msgid "Ivas"
+msgstr ""
+
+#: View/Ivas/index.ctp:42
+#: View/Ivas/view.ctp:32
+#: View/People/edit.ctp:24
+#: View/People/index.ctp:56
+#: View/People/view.ctp:79
+msgid "New Iva"
+msgstr ""
+
+#: View/Ivas/view.ctp:30
+msgid "Delete Iva"
+msgstr ""
+
+#: View/Ivas/view.ctp:38
+msgid "Related People"
+msgstr ""
+
+#: View/Ivas/view.ctp:45
+#: View/People/view.ctp:19
+msgid "Telephone"
+msgstr ""
+
+#: View/Ivas/view.ctp:46
+#: View/People/view.ctp:24
+msgid "Email"
+msgstr ""
+
+#: View/Ivas/view.ctp:48
+#: View/People/view.ctp:34
+msgid "Responsableinscripto"
+msgstr ""
+
+#: View/Ivas/view.ctp:49
+#: View/People/view.ctp:39
+msgid "Exento"
+msgstr ""
+
+#: View/Ivas/view.ctp:50
+#: View/People/view.ctp:44
+msgid "Monotributista"
+msgstr ""
+
+#: View/Ivas/view.ctp:51
+#: View/People/view.ctp:49
+msgid "Consumidorfinal"
+msgstr ""
+
+#: View/Ivas/view.ctp:54
+msgid "Iva Id"
+msgstr ""
+
+#: View/Ivatypes/add.ctp:4
+msgid "Add Ivatype"
+msgstr ""
+
+#: View/Ivatypes/add.ctp:17
+#: View/Ivatypes/edit.ctp:19
+#: View/Ivatypes/view.ctp:41
+#: View/Notascreditos/add.ctp:274
+#: View/Notascreditos/edit.ctp:65
+#: View/Notascreditos/index.ctp:210
+#: View/Notascreditos/nueva.ctp:263
+#: View/Notascreditos/view.ctp:244
+msgid "List Ivatypes"
+msgstr ""
+
+#: View/Ivatypes/edit.ctp:4
+#: View/Ivatypes/view.ctp:39
+msgid "Edit Ivatype"
+msgstr ""
+
+#: View/Ivatypes/index.ctp:2
+msgid "Ivatypes"
+msgstr ""
+
+#: View/Ivatypes/index.ctp:46
+#: View/Ivatypes/view.ctp:42
+#: View/Notascreditos/add.ctp:275
+#: View/Notascreditos/edit.ctp:66
+#: View/Notascreditos/index.ctp:211
+#: View/Notascreditos/nueva.ctp:264
+#: View/Notascreditos/view.ctp:245
+msgid "New Ivatype"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:2
+#: View/Notascreditos/view.ctp:214
+msgid "Ivatype"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:40
+msgid "Delete Ivatype"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:48
+#: View/Paymentconditions/view.ctp:43
+msgid "Related Invoices"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:54
+#: View/Notascreditos/view.ctp:14;224
+#: View/Paymentconditions/view.ctp:49
+#: View/Types/view.ctp:2
+msgid "Type"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:56
+#: View/Notascreditos/view.ctp:24
+msgid "Company Name"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:59
+#: View/Notascreditos/view.ctp:49
+#: View/Paymentconditions/view.ctp:52
+msgid "Dni"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:63
+#: View/Loteos/view.ctp:2
+#: View/Notascreditos/view.ctp:69
+msgid "Loteo"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:65
+#: View/Notascreditos/view.ctp:79
+#: View/Paymentconditions/view.ctp:57
+msgid "Gastos Administrativos"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:68
+#: View/Notascreditos/view.ctp:94
+#: View/Paymentconditions/view.ctp:60
+msgid "IvaId"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:69
+#: View/Notascreditos/view.ctp:99
+#: View/Paymentconditions/view.ctp:61
+msgid "IvaName"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:71
+#: View/Notascreditos/view.ctp:109
+#: View/Paymentconditions/view.ctp:63
+msgid "Tgi"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:72
+#: View/Notascreditos/view.ctp:114
+#: View/Paymentconditions/view.ctp:64
+msgid "Api"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:73
+#: View/Notascreditos/view.ctp:119
+#: View/Paymentconditions/view.ctp:65
+msgid "Agua"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:74
+#: View/Notascreditos/view.ctp:124
+#: View/Paymentconditions/view.ctp:66
+msgid "Stamped"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:75
+#: View/Notascreditos/view.ctp:129
+#: View/Paymentconditions/view.ctp:67
+msgid "Retenciones"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:76
+#: View/Notascreditos/view.ctp:134
+#: View/Paymentconditions/view.ctp:68
+msgid "Percepciones"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:80
+#: View/Notascreditos/view.ctp:154
+#: View/Paymentconditions/view.ctp:72
+msgid "Observation Price"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:81
+#: View/Notascreditos/view.ctp:159
+#: View/Paymentconditions/view.ctp:73
+msgid "Observation Tgi"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:82
+#: View/Notascreditos/view.ctp:164
+#: View/Paymentconditions/view.ctp:74
+msgid "Observation Api"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:83
+#: View/Notascreditos/view.ctp:169
+#: View/Paymentconditions/view.ctp:75
+msgid "Observation Agua"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:84
+#: View/Notascreditos/view.ctp:174
+msgid "Observation Periodo Facturado"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:85
+#: View/Notascreditos/view.ctp:179
+msgid "Observation Gastos Administrativos"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:87
+#: View/Notascreditos/view.ctp:189
+#: View/Paymentconditions/view.ctp:77
+msgid "Cae Fecha Vencimiento"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:90
+#: View/Paymentconditions/view.ctp:80
+msgid "Estate Id"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:91
+msgid "Ivatype Id"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:92
+#: View/Paymentconditions/view.ctp:81
+msgid "Paymentcondition Id"
+msgstr ""
+
+#: View/Ivatypes/view.ctp:93
+#: View/Paymentconditions/view.ctp:82
+msgid "Type Id"
+msgstr ""
+
+#: View/Layouts/default.ctp:70
+#: View/Loteos/view.ctp:47
+msgid "New Loteo"
+msgstr ""
+
+#: View/Layouts/default.ctp:71
+#: View/Loteos/add.ctp:191
+#: View/Loteos/edit.ctp:196
+#: View/Loteos/view.ctp:46
+msgid "List Loteos"
+msgstr ""
+
+#: View/Loteos/add.ctp:5;177
+msgid "Add Loteo"
+msgstr ""
+
+#: View/Loteos/edit.ctp:180
+#: View/Loteos/view.ctp:44
+msgid "Edit Loteo"
+msgstr ""
+
+#: View/Loteos/index.ctp:2
+msgid "Loteos"
+msgstr ""
+
+#: View/Loteos/view.ctp:14
+msgid "Manzana"
+msgstr ""
+
+#: View/Loteos/view.ctp:19
+msgid "Cuenta"
+msgstr ""
+
+#: View/Loteos/view.ctp:45
+msgid "Delete Loteo"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:21;215
+#: View/Notascreditos/nueva.ctp:21;204
+msgid "Add Notascredito"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:267
+#: View/Notascreditos/edit.ctp:58
+#: View/Notascreditos/nueva.ctp:256
+#: View/Notascreditos/view.ctp:236
+msgid "List Notascreditos"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:276
+#: View/Notascreditos/edit.ctp:67
+#: View/Notascreditos/index.ctp:212
+#: View/Notascreditos/nueva.ctp:265
+#: View/Notascreditos/view.ctp:246
+#: View/Paymentconditions/add.ctp:16
+#: View/Paymentconditions/edit.ctp:18
+#: View/Paymentconditions/view.ctp:36
+msgid "List Paymentconditions"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:277
+#: View/Notascreditos/edit.ctp:68
+#: View/Notascreditos/index.ctp:213
+#: View/Notascreditos/nueva.ctp:266
+#: View/Notascreditos/view.ctp:247
+#: View/Paymentconditions/index.ctp:44
+#: View/Paymentconditions/view.ctp:37
+msgid "New Paymentcondition"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:278
+#: View/Notascreditos/edit.ctp:69
+#: View/Notascreditos/index.ctp:214
+#: View/Notascreditos/nueva.ctp:267
+#: View/Notascreditos/view.ctp:248
+#: View/Types/add.ctp:16
+#: View/Types/edit.ctp:18
+#: View/Types/view.ctp:36
+msgid "List Types"
+msgstr ""
+
+#: View/Notascreditos/add.ctp:279
+#: View/Notascreditos/edit.ctp:70
+#: View/Notascreditos/index.ctp:215
+#: View/Notascreditos/nueva.ctp:268
+#: View/Notascreditos/view.ctp:249
+#: View/Types/index.ctp:44
+#: View/Types/view.ctp:37
+msgid "New Type"
+msgstr ""
+
+#: View/Notascreditos/edit.ctp:4
+#: View/Notascreditos/view.ctp:234
+msgid "Edit Notascredito"
+msgstr ""
+
+#: View/Notascreditos/index.ctp:2;69
+msgid "Notascreditos"
+msgstr ""
+
+#: View/Notascreditos/index.ctp:203
+#: View/Notascreditos/view.ctp:237
+msgid "New Notascredito"
+msgstr ""
+
+#: View/Notascreditos/view.ctp:2
+msgid "Notascredito"
+msgstr ""
+
+#: View/Notascreditos/view.ctp:39
+msgid "Docnumber"
+msgstr ""
+
+#: View/Notascreditos/view.ctp:44
+msgid "Doctype Name"
+msgstr ""
+
+#: View/Notascreditos/view.ctp:219
+#: View/Paymentconditions/view.ctp:2
+msgid "Paymentcondition"
+msgstr ""
+
+#: View/Notascreditos/view.ctp:235
+msgid "Delete Notascredito"
+msgstr ""
+
+#: View/Owners/add.ctp:5
+msgid "Add Owner"
+msgstr ""
+
+#: View/Owners/edit.ctp:6
+msgid "Edit Owner"
+msgstr ""
+
+#: View/Owners/index.ctp:3
+msgid "Owners"
+msgstr ""
+
+#: View/Paymentconditions/add.ctp:4
+msgid "Add Paymentcondition"
+msgstr ""
+
+#: View/Paymentconditions/edit.ctp:4
+#: View/Paymentconditions/view.ctp:34
+msgid "Edit Paymentcondition"
+msgstr ""
+
+#: View/Paymentconditions/index.ctp:2
+msgid "Paymentconditions"
+msgstr ""
+
+#: View/Paymentconditions/view.ctp:35
+msgid "Delete Paymentcondition"
+msgstr ""
+
+#: View/People/add.ctp:4
+msgid "Add Person"
+msgstr ""
+
+#: View/People/edit.ctp:4
+#: View/People/view.ctp:74
+msgid "Edit Person"
+msgstr ""
+
+#: View/People/index.ctp:2
+msgid "People"
+msgstr ""
+
+#: View/People/view.ctp:2
+msgid "Person"
+msgstr ""
+
+#: View/People/view.ctp:75
+msgid "Delete Person"
+msgstr ""
+
+#: View/People/view.ctp:85
+msgid "Related Owners"
+msgstr ""
+
+#: View/People/view.ctp:92
+msgid "Person Id"
+msgstr ""
+
+#: View/Renters/add.ctp:5
+msgid "Add Renter"
+msgstr ""
+
+#: View/Renters/edit.ctp:6
+msgid "Edit Renter"
+msgstr ""
+
+#: View/Renters/index.ctp:3
+msgid "Renters"
+msgstr ""
+
+#: View/Rols/add.ctp:4
+msgid "Add Rol"
+msgstr ""
+
+#: View/Rols/add.ctp:17
+#: View/Rols/edit.ctp:19
+#: View/Rols/view.ctp:41
+#: View/Users/add.ctp:19
+#: View/Users/edit.ctp:21
+#: View/Users/index.ctp:51
+#: View/Users/view.ctp:48
+msgid "List Rols"
+msgstr ""
+
+#: View/Rols/add.ctp:18
+#: View/Rols/edit.ctp:20
+#: View/Rols/index.ctp:47
+#: View/Rols/view.ctp:43
+#: View/Users/add.ctp:18
+#: View/Users/edit.ctp:20
+#: View/Users/view.ctp:46
+msgid "List Users"
+msgstr ""
+
+#: View/Rols/add.ctp:19
+#: View/Rols/edit.ctp:21
+#: View/Rols/index.ctp:48
+#: View/Rols/view.ctp:44;82
+#: View/Users/index.ctp:50
+#: View/Users/view.ctp:47
+msgid "New User"
+msgstr ""
+
+#: View/Rols/edit.ctp:4
+#: View/Rols/view.ctp:39
+msgid "Edit Rol"
+msgstr ""
+
+#: View/Rols/index.ctp:2
+msgid "Rols"
+msgstr ""
+
+#: View/Rols/index.ctp:46
+#: View/Rols/view.ctp:42
+#: View/Users/add.ctp:20
+#: View/Users/edit.ctp:22
+#: View/Users/index.ctp:52
+#: View/Users/view.ctp:49
+msgid "New Rol"
+msgstr ""
+
+#: View/Rols/view.ctp:2
+#: View/Users/view.ctp:34
+msgid "Rol"
+msgstr ""
+
+#: View/Rols/view.ctp:14
+msgid "Description"
+msgstr ""
+
+#: View/Rols/view.ctp:29
+msgid "Weight"
+msgstr ""
+
+#: View/Rols/view.ctp:40
+msgid "Delete Rol"
+msgstr ""
+
+#: View/Rols/view.ctp:48
+msgid "Related Users"
+msgstr ""
+
+#: View/Rols/view.ctp:53
+#: View/Users/view.ctp:9
+msgid "Username"
+msgstr ""
+
+#: View/Rols/view.ctp:54
+#: View/Users/view.ctp:14
+msgid "Password"
+msgstr ""
+
+#: View/Rols/view.ctp:58
+msgid "Rol Id"
+msgstr ""
+
+#: View/Types/add.ctp:4
+msgid "Add Type"
+msgstr ""
+
+#: View/Types/edit.ctp:4
+#: View/Types/view.ctp:34
+msgid "Edit Type"
+msgstr ""
+
+#: View/Types/index.ctp:2
+msgid "Types"
+msgstr ""
+
+#: View/Types/view.ctp:35
+msgid "Delete Type"
+msgstr ""
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: View/Users/edit.ctp:4
+#: View/Users/view.ctp:44
+msgid "Edit User"
+msgstr ""
+
+#: View/Users/index.ctp:2
+msgid "Users"
+msgstr ""
+
+#: View/Users/login.ctp:11;16
+msgid "Nombre de Usuario"
+msgstr ""
+
+#: View/Users/login.ctp:26;31
+msgid "Contraseña"
+msgstr ""
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr ""
+
+#: View/Users/view.ctp:45
+msgid "Delete User"
+msgstr ""
+
+#: Model/Check.php:validation for field amount
+#: Model/Estate.php:validation for field price
+#: Model/Invoice.php:validation for field price
+#: Model/Ivatype.php:validation for field amount
+#: Model/Notascredito.php:validation for field doctype_id;validation for field ivatype_id;validation for field paymentcondition_id
+#: Model/Paymentcondition.php:validation for field code
+#: Model/Person.php:validation for field iva_id
+#: Model/Type.php:validation for field code
+msgid "numeric"
+msgstr ""
+
+#: Model/Check.php:validation for field invoice_id
+#: Model/Inmueble.php:validation for field estate_id
+#: Model/Invoice.php:validation for field estate_id
+#: Model/Loteo.php:validation for field estate_id
+#: Model/Notascredito.php:validation for field estate_id
+#: Model/Owner.php:validation for field person_id
+#: Model/Renter.php:validation for field person_id
+msgid "uuid"
+msgstr ""
+
+#: Model/Company.php:validation for field name
+#: Model/Doctype.php:validation for field code;validation for field name
+#: Model/Estate.php:validation for field name;validation for field address;validation for field owner
+#: Model/Invoice.php:validation for field name;validation for field address;validation for field owner
+#: Model/Iva.php:validation for field name
+#: Model/Ivatype.php:validation for field code;validation for field name
+#: Model/Notascredito.php:validation for field name;validation for field docnumber
+#: Model/Paymentcondition.php:validation for field name
+#: Model/Person.php:validation for field name
+#: Model/Type.php:validation for field name
+msgid "notEmpty"
+msgstr ""
+
+#: Model/Estate.php:validation for field contract_start;validation for field contract_end
+msgid "Verifique la fecha"
+msgstr ""
+
+#: Model/Invoice.php:validation for field contract_start;validation for field contract_end
+msgid "datetime"
+msgstr ""
+

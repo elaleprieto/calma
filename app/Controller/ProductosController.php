@@ -17,7 +17,7 @@ class ProductosController extends AppController {
 
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
-		$user_allowed = array('index');
+		$user_allowed = array();
 		$admin_allowed = array_merge($owner_allowed, $user_allowed, array());
 
 		# All registered users can:

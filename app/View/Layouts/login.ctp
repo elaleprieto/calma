@@ -12,30 +12,28 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
-		<?php echo $this -> Html -> meta('icon'); ?>
-
 		<?php
-		# Estilos
-		echo $this -> Html -> css('bootstrap.min');
-
+		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
 
-		# Estilos (Cont.)
-		echo $this -> fetch('css');
-
+		# Estilos
+		echo $this->Html->css(array('/bower_components/bootstrap/dist/css/bootstrap.min.css'
+			, '/bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+		));
+		echo $this->fetch('css');
 		?>
 	</head>
 	<body>
 		<!-- Contenido -->
 		<div id="container" class="container-fluid">
-			<?php echo $this -> Session -> flash('flash', array('element' => 'error_login')); ?>
+			<?php echo $this->Session->flash('flash', array('element' => 'error_login')); ?>
 
 			<?php echo $content_for_layout; ?>
 		</div>
 
 		<?php
-		echo $this->Html->script(array('vendors/jquery/jquery-1.11.1.min'
-			, 'vendors/bootstrap/3.1.1/bootstrap.min'
+		echo $this->Html->script(array('/bower_components/jquery/dist/jquery.min'
+			, '/bower_components/bootstrap/dist/js/bootstrap.min.js'
 		));
 		?>
 	</body>

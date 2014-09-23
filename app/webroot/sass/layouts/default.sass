@@ -1,0 +1,53 @@
+$color-background-inverse: #222222
+$color-inverse: #999999
+$color-white: #ffffff
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+	display: none !important
+
+body
+	background-color: $color-background-inverse
+	margin-top: 50px
+	margin-top: 5rem
+
+footer
+	background-color: $color-background-inverse
+	color: $color-inverse
+	padding: 0 10px
+	padding: 0 1rem
+	text-align: right
+
+h1, legend
+	font-size: 30px
+	font-size: 3rem
+
+section
+	background-color: $color-white
+	margin-bottom: 20px
+	margin-bottom: 2rem
+
+	&.container-fluid
+		min-height: 500px
+		min-height: 50rem
+
+.date
+	display: inline
+	margin: 0 10px
+	width: 20%
+	
+	&:first-of-type
+		margin-left: 0px
+
+.paging
+	text-align: center
+
+	& .current, & .disabled, & a
+		text-decoration: none
+		padding: 5px 8px
+		display: inline-block
+
+	& .disabled
+		color: #ddd
+		
+		&:hover
+			background: transparent

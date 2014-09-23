@@ -14,7 +14,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'Calmacapricho');
+$siteTitle = __d('cake_dev', 'Calmacapricho');
 $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -25,39 +25,60 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+
 	<?php
 		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
+
+		echo $this->Html->css(array('/bower_components/bootstrap/dist/css/bootstrap.min.css'
+			, '/bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+			, 'layouts/default'
+		));
 		echo $this->fetch('css');
-		echo $this->fetch('script');
 	?>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/"><?php echo $siteTitle; ?></a>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+  					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><?php echo $this->Html->link('Nuevo', array('controller' =>'productos','action' => 'add')); ?></li>
+							<li><?php echo $this->Html->link('Listar', array('controller' =>'productos','action' => 'index')); ?></li>
+						</ul>
+	        </li>
+	        <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Proveedores<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><?php echo $this->Html->link('Nuevo', array('controller' =>'proveedores','action' => 'add')); ?></li>
+							<li><?php echo $this->Html->link('Listar', array('controller' =>'proveedores','action' => 'index')); ?></li>
+						</ul>
+	        </li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+    			<li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Salir</a></li>
+    		</ul>
+			</div>
+		</nav>
+	</header>
 
-			<?php echo $this->Session->flash(); ?>
+	<section class="container-fluid">
+		<?php echo $this->Session->flash(); ?>
+		<?php echo $this->fetch('content'); ?>
+	</section>
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
+	<footer>Sistema de Gestión Calmacapricho</footer>
+
+	<?php
+	echo $this->Html->script(array('/bower_components/jquery/dist/jquery.min'
+		, '/bower_components/bootstrap/dist/js/bootstrap.min.js'
+	));
+	echo $this->fetch('script');
+	?>
+
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
