@@ -3,14 +3,14 @@
 	<fieldset>
 		<legend><?php echo __('Add Producto'); ?></legend>
 	<?php
-		echo $this->Form->input('codigo');
-		echo $this->Form->input('barra');
-		echo $this->Form->input('orden');
-		echo $this->Form->input('detalle');
-		echo $this->Form->input('unidad');
+		echo $this->Form->input('codigo', array('label'=>'Código interno'));
+		echo $this->Form->input('barra', array('label'=>'Código de barra'));
+		// echo $this->Form->input('orden');
+		echo $this->Form->input('detalle', array('label'=>'Descripción'));
+		// echo $this->Form->input('unidad');
 		echo $this->Form->input('precio_compra');
 		echo $this->Form->input('precio_venta');
-		echo $this->Form->input('foto');
+		// echo $this->Form->input('foto');
 		echo $this->Form->input('stock');
 		echo $this->Form->input('porcentaje');
 		echo $this->Form->input('stock_minimo');
