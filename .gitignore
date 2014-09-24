@@ -6,6 +6,7 @@ app/tmp/*
 app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
+app/webroot/.sass-cache/*
 
 # User specific & automatically generated files #
 #################################################

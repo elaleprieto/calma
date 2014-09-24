@@ -1,11 +1,6 @@
 <div class="proveedores view">
-<h2><?php echo __('Proveedore'); ?></h2>
+<h2>Proveedor</h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($proveedore['Proveedore']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Name'); ?></dt>
 		<dd>
 			<?php echo h($proveedore['Proveedore']['name']); ?>
@@ -26,7 +21,7 @@
 			<?php echo h($proveedore['Proveedore']['observaciones']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<!-- <dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($proveedore['Proveedore']['created']); ?>
 			&nbsp;
@@ -35,7 +30,7 @@
 		<dd>
 			<?php echo h($proveedore['Proveedore']['modified']); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 		<dt><?php echo __('Localidade'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($proveedore['Localidade']['id'], array('controller' => 'localidades', 'action' => 'view', $proveedore['Localidade']['id'])); ?>
@@ -43,7 +38,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Proveedore'), array('action' => 'edit', $proveedore['Proveedore']['id'])); ?> </li>
@@ -108,4 +103,4 @@
 			<li><?php echo $this->Html->link(__('New Producto'), array('controller' => 'productos', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-</div>
+</div> -->

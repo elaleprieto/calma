@@ -14,7 +14,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$siteTitle = __d('cake_dev', 'Calmacapricho');
+$siteTitle = 'Calmacapricho';
 $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+		<?php echo $siteTitle ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
 
@@ -41,7 +41,10 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/"><?php echo $siteTitle; ?></a>
+				<a class="navbar-brand" href="/">
+					<?php echo $this->Html->image('calmacapricho.jpg') ?>
+					<?php echo $siteTitle; ?>
+				</a>
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
   					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>

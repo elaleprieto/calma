@@ -1,11 +1,6 @@
 <div class="productos view">
 <h2><?php echo __('Producto'); ?></h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($producto['Producto']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Codigo'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['codigo']); ?>
@@ -16,21 +11,21 @@
 			<?php echo h($producto['Producto']['barra']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Orden'); ?></dt>
+		<!-- <dt><?php echo __('Orden'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['orden']); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 		<dt><?php echo __('Detalle'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['detalle']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Unidad'); ?></dt>
+		<!-- <dt><?php echo __('Unidad'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['unidad']); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 		<dt><?php echo __('Precio Compra'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['precio_compra']); ?>
@@ -41,12 +36,12 @@
 			<?php echo h($producto['Producto']['precio_venta']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Foto'); ?></dt>
+		<!-- <dt><?php echo __('Foto'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['foto']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		</dd> -->
+		<!-- <dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['created']); ?>
 			&nbsp;
@@ -55,7 +50,7 @@
 		<dd>
 			<?php echo h($producto['Producto']['modified']); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 		<dt><?php echo __('Stock'); ?></dt>
 		<dd>
 			<?php echo h($producto['Producto']['stock']); ?>
@@ -73,7 +68,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Producto'), array('action' => 'edit', $producto['Producto']['id'])); ?> </li>
@@ -169,4 +164,4 @@
 			<li><?php echo $this->Html->link(__('New Ordene'), array('controller' => 'ordenes', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-</div>
+</div> -->

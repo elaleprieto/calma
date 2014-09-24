@@ -1,20 +1,21 @@
 <div class="proveedores form">
 <?php echo $this->Form->create('Proveedore'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Proveedore'); ?></legend>
+		<legend>Editar Proveedor</legend>
 	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-		echo $this->Form->input('direccion');
-		echo $this->Form->input('cuit');
-		echo $this->Form->input('observaciones');
-		echo $this->Form->input('localidade_id');
-		echo $this->Form->input('Producto');
+		echo $this->Form->hidden('id');
+		echo $this->Form->input('name', array('class'=>'form-control', 'div'=>'form-group'));
+		echo $this->Form->input('direccion', array('class'=>'form-control', 'div'=>'form-group'));
+		echo $this->Form->input('cuit', array('class'=>'form-control', 'div'=>'form-group'));
+		echo $this->Form->input('observaciones', array('class'=>'form-control', 'div'=>'form-group'));
+		// echo $this->Form->input('localidade_id');
+		// echo $this->Form->input('Producto');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->submit('Guardar', array('class'=>'btn btn-primary col-sm-6 col-sm-offset-3', 'div'=>'text-center')); ?>
+<?php echo $this->Form->end(); ?>
 </div>
-<div class="actions">
+<!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
@@ -25,4 +26,4 @@
 		<li><?php echo $this->Html->link(__('List Productos'), array('controller' => 'productos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Producto'), array('controller' => 'productos', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div> -->

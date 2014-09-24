@@ -20,13 +20,12 @@ class ProveedoresController extends AppController {
 	**************************************************************************************************************/
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow();
 	}
 
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
 		$user_allowed = array();
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array());
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'index', 'view'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
