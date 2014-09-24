@@ -31,13 +31,14 @@
 			<?php echo h($proveedore['Proveedore']['modified']); ?>
 			&nbsp;
 		</dd> -->
-		<dt><?php echo __('Localidade'); ?></dt>
+		<!-- <dt><?php echo __('Localidade'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($proveedore['Localidade']['id'], array('controller' => 'localidades', 'action' => 'view', $proveedore['Localidade']['id'])); ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 	</dl>
 </div>
+
 <!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -50,23 +51,19 @@
 		<li><?php echo $this->Html->link(__('List Productos'), array('controller' => 'productos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Producto'), array('controller' => 'productos', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->
+
+<!-- Productos relacionados -->
 <div class="related">
-	<h3><?php echo __('Related Productos'); ?></h3>
+	<h3>Productos Relacionados</h3>
 	<?php if (!empty($proveedore['Producto'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
+	<table cellpadding = "0" cellspacing = "0" class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Codigo'); ?></th>
 		<th><?php echo __('Barra'); ?></th>
-		<th><?php echo __('Orden'); ?></th>
 		<th><?php echo __('Detalle'); ?></th>
-		<th><?php echo __('Unidad'); ?></th>
 		<th><?php echo __('Precio Compra'); ?></th>
 		<th><?php echo __('Precio Venta'); ?></th>
-		<th><?php echo __('Foto'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
 		<th><?php echo __('Stock'); ?></th>
 		<th><?php echo __('Porcentaje'); ?></th>
 		<th><?php echo __('Stock Minimo'); ?></th>
@@ -74,33 +71,28 @@
 	</tr>
 	<?php foreach ($proveedore['Producto'] as $producto): ?>
 		<tr>
-			<td><?php echo $producto['id']; ?></td>
+			<!-- <td><?php echo $producto['id']; ?></td> -->
 			<td><?php echo $producto['codigo']; ?></td>
 			<td><?php echo $producto['barra']; ?></td>
-			<td><?php echo $producto['orden']; ?></td>
 			<td><?php echo $producto['detalle']; ?></td>
-			<td><?php echo $producto['unidad']; ?></td>
 			<td><?php echo $producto['precio_compra']; ?></td>
 			<td><?php echo $producto['precio_venta']; ?></td>
-			<td><?php echo $producto['foto']; ?></td>
-			<td><?php echo $producto['created']; ?></td>
-			<td><?php echo $producto['modified']; ?></td>
 			<td><?php echo $producto['stock']; ?></td>
 			<td><?php echo $producto['porcentaje']; ?></td>
 			<td><?php echo $producto['stock_minimo']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'productos', 'action' => 'view', $producto['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'productos', 'action' => 'edit', $producto['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'productos', 'action' => 'delete', $producto['id']), array(), __('Are you sure you want to delete # %s?', $producto['id'])); ?>
+				<?php // echo $this->Form->postLink(__('Delete'), array('controller' => 'productos', 'action' => 'delete', $producto['id']), array(), __('Are you sure you want to delete # %s?', $producto['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
+	<!-- <div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Producto'), array('controller' => 'productos', 'action' => 'add')); ?> </li>
 		</ul>
-	</div>
-</div> -->
+	</div> -->
+</div>

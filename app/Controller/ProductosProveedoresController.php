@@ -8,49 +8,47 @@ App::uses('AppController', 'Controller');
  */
 class ProductosProveedoresController extends AppController {
 
-		/**************************************************************************************************************
-		* Authentication
-		**************************************************************************************************************/
-		public function beforeFilter() {
-			parent::beforeFilter();
-			$this->Auth->allow();
-		}
-
-		public function isAuthorized($user = null) {
-			$owner_allowed = array();
-			$user_allowed = array('index');
-			$admin_allowed = array_merge($owner_allowed, $user_allowed, array());
-
-			# All registered users can:
-			if (in_array($this->action, $user_allowed))
-				return true;
-
-			# Admin users can:
-			// if ($user['rol'] === 'admin')
-			if ($user['Rol']['weight'] >= $this->User->ADMIN)
-				if (in_array($this->action, $admin_allowed))
-					return true;
-
-			# The owner of an user can:
-			if (in_array($this->action, $owner_allowed)) {
-				$userId = $this->request->params['pass'][0];
-				if ($this->Event->isOwnedBy($userId, $user['id']))
-					return true;
-			}
-
-			return parent::isAuthorized($user);
-		}
-		/**************************************************************************************************************
-		* /authentication
-		**************************************************************************************************************/
-
-
 /**
  * Components
  *
  * @var array
  */
 	public $components = array('Paginator');
+
+	/*****************************************************************************
+	* Authentication
+	*****************************************************************************/
+	public function beforeFilter() {
+				parent::beforeFilter();
+				$this->Auth->allow();
+			}
+
+	public function isAuthorized($user = null) {
+		$owner_allowed = array();
+		$user_allowed = array();
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add'));
+
+		# All registered users can:
+		if (in_array($this->action, $user_allowed))
+			return true;
+
+		# Admin users can:
+		// if ($user['rol'] === 'admin')
+		if ($user['Rol']['weight'] >= $this->User->ADMIN)
+			if (in_array($this->action, $admin_allowed))
+				return true;
+
+		# The owner of an user can:
+		if (in_array($this->action, $owner_allowed)) {
+			$userId = $this->request->params['pass'][0];
+			if ($this->Event->isOwnedBy($userId, $user['id']))
+				return true;
+		}
+		return parent::isAuthorized($user);
+	}
+	/**************************************************************************
+	* /authentication
+	**************************************************************************/
 
 /**
  * index method
@@ -87,7 +85,10 @@ class ProductosProveedoresController extends AppController {
 			$this->ProductosProveedore->create();
 			if ($this->ProductosProveedore->save($this->request->data)) {
 				$this->Session->setFlash(__('The productos proveedore has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				// return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller'=>'proveedores'
+					, 'action' => 'view'
+						, $this->request->data['ProductosProveedore']['proveedore_id']));
 			} else {
 				$this->Session->setFlash(__('The productos proveedore could not be saved. Please, try again.'));
 			}

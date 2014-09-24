@@ -8,6 +8,7 @@ App::uses('AppModel', 'Model');
  * @property Proveedore $Proveedore
  */
 class Producto extends AppModel {
+	public $displayField = 'detalle';
 
 /**
  * Validation rules

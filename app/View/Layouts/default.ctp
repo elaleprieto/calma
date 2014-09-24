@@ -47,22 +47,64 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 				</a>
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-  					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+  					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Productos<b class="caret"></b>
+						</a>
 						<ul class="dropdown-menu">
-							<li><?php echo $this->Html->link('Nuevo', array('controller' =>'productos','action' => 'add')); ?></li>
-							<li><?php echo $this->Html->link('Listar', array('controller' =>'productos','action' => 'index')); ?></li>
+							<li>
+								<?php
+								echo $this->Html->link('Nuevo'
+									, array('controller' =>'productos','action' => 'add'));
+								?>
+							</li>
+							<li>
+								<?php
+								echo $this->Html->link('Listar'
+									, array('controller' =>'productos','action' => 'index'));
+								?>
+							</li>
 						</ul>
 	        </li>
 	        <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Proveedores<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Proveedores<b class="caret"></b>
+						</a>
 						<ul class="dropdown-menu">
-							<li><?php echo $this->Html->link('Nuevo', array('controller' =>'proveedores','action' => 'add')); ?></li>
-							<li><?php echo $this->Html->link('Listar', array('controller' =>'proveedores','action' => 'index')); ?></li>
+							<li>
+								<?php
+								echo $this->Html->link('Nuevo'
+								, array('controller' =>'proveedores','action' => 'add'));
+								?>
+							</li>
+							<li>
+								<?php
+								echo $this->Html->link('Listar'
+								, array('controller' =>'proveedores','action' => 'index'));
+								?>
+							</li>
+						</ul>
+	        </li>
+	        <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Asociar<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<?php
+								echo $this->Html->link('Producto con Proveedor'
+								, array('controller' =>'productos_proveedores'
+									,'action' => 'add'));
+								?>
+							</li>
 						</ul>
 	        </li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-    			<li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Salir</a></li>
+    			<li>
+						<a href="/logout">
+							<span class="glyphicon glyphicon-user"></span> Salir
+						</a>
+					</li>
     		</ul>
 			</div>
 		</nav>
