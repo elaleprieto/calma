@@ -15,8 +15,15 @@ class MovimientosControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.movimiento',
 		'app.producto',
+		'app.ordene',
+		'app.pedido',
+		'app.proveedore',
+		'app.localidade',
+		'app.provincia',
+		'app.productos_proveedore',
 		'app.accione',
-		'app.user'
+		'app.user',
+		'app.rol'
 	);
 
 /**

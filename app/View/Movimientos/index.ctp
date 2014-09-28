@@ -7,7 +7,7 @@
 			<th><?php echo $this->Paginator->sort('cantidad'); ?></th>
 			<th><?php echo $this->Paginator->sort('cantidad_anterior'); ?></th>
 			<th><?php echo $this->Paginator->sort('observaciones'); ?></th>
-			<th><?php echo $this->Paginator->sort('movimiento'); ?></th>
+			<th><?php echo $this->Paginator->sort('egreso'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th><?php echo $this->Paginator->sort('producto_id'); ?></th>
@@ -23,14 +23,14 @@
 		<td><?php echo h($movimiento['Movimiento']['cantidad']); ?>&nbsp;</td>
 		<td><?php echo h($movimiento['Movimiento']['cantidad_anterior']); ?>&nbsp;</td>
 		<td><?php echo h($movimiento['Movimiento']['observaciones']); ?>&nbsp;</td>
-		<td><?php echo h($movimiento['Movimiento']['movimiento']); ?>&nbsp;</td>
+		<td><?php echo h($movimiento['Movimiento']['egreso']); ?>&nbsp;</td>
 		<td><?php echo h($movimiento['Movimiento']['created']); ?>&nbsp;</td>
 		<td><?php echo h($movimiento['Movimiento']['modified']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($movimiento['Producto']['id'], array('controller' => 'productos', 'action' => 'view', $movimiento['Producto']['id'])); ?>
+			<?php echo $this->Html->link($movimiento['Producto']['detalle'], array('controller' => 'productos', 'action' => 'view', $movimiento['Producto']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($movimiento['Accione']['id'], array('controller' => 'acciones', 'action' => 'view', $movimiento['Accione']['id'])); ?>
+			<?php echo $this->Html->link($movimiento['Accione']['name'], array('controller' => 'acciones', 'action' => 'view', $movimiento['Accione']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($movimiento['User']['name'], array('controller' => 'users', 'action' => 'view', $movimiento['User']['id'])); ?>

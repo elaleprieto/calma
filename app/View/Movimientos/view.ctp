@@ -21,9 +21,9 @@
 			<?php echo h($movimiento['Movimiento']['observaciones']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Movimiento'); ?></dt>
+		<dt><?php echo __('Egreso'); ?></dt>
 		<dd>
-			<?php echo h($movimiento['Movimiento']['movimiento']); ?>
+			<?php echo h($movimiento['Movimiento']['egreso']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Created'); ?></dt>
@@ -38,12 +38,12 @@
 		</dd>
 		<dt><?php echo __('Producto'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($movimiento['Producto']['id'], array('controller' => 'productos', 'action' => 'view', $movimiento['Producto']['id'])); ?>
+			<?php echo $this->Html->link($movimiento['Producto']['detalle'], array('controller' => 'productos', 'action' => 'view', $movimiento['Producto']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Accione'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($movimiento['Accione']['id'], array('controller' => 'acciones', 'action' => 'view', $movimiento['Accione']['id'])); ?>
+			<?php echo $this->Html->link($movimiento['Accione']['name'], array('controller' => 'acciones', 'action' => 'view', $movimiento['Accione']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('User'); ?></dt>
