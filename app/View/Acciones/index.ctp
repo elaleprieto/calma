@@ -4,7 +4,8 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('categoria'); ?></th>
+			<th><?php echo $this->Paginator->sort('name'); ?></th>
+			<th><?php echo $this->Paginator->sort('egreso'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -14,7 +15,8 @@
 	<?php foreach ($acciones as $accione): ?>
 	<tr>
 		<td><?php echo h($accione['Accione']['id']); ?>&nbsp;</td>
-		<td><?php echo h($accione['Accione']['categoria']); ?>&nbsp;</td>
+		<td><?php echo h($accione['Accione']['name']); ?>&nbsp;</td>
+		<td><?php echo h($accione['Accione']['egreso']); ?>&nbsp;</td>
 		<td><?php echo h($accione['Accione']['created']); ?>&nbsp;</td>
 		<td><?php echo h($accione['Accione']['modified']); ?>&nbsp;</td>
 		<td class="actions">
@@ -44,5 +46,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Accione'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Movimientos'), array('controller' => 'movimientos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Movimiento'), array('controller' => 'movimientos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

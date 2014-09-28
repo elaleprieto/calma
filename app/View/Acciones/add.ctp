@@ -3,7 +3,8 @@
 	<fieldset>
 		<legend><?php echo __('Add Accione'); ?></legend>
 	<?php
-		echo $this->Form->input('categoria');
+		echo $this->Form->input('name');
+		echo $this->Form->input('egreso');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -13,5 +14,7 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Acciones'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Movimientos'), array('controller' => 'movimientos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Movimiento'), array('controller' => 'movimientos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

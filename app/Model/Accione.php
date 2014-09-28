@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Accione Model
  *
+ * @property Movimiento $Movimiento
  */
 class Accione extends AppModel {
 
@@ -12,7 +13,7 @@ class Accione extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'categoria' => array(
+		'name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -23,4 +24,28 @@ class Accione extends AppModel {
 			),
 		),
 	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Movimiento' => array(
+			'className' => 'Movimiento',
+			'foreignKey' => 'accione_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

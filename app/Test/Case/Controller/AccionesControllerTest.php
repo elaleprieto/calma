@@ -13,7 +13,17 @@ class AccionesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.accione'
+		'app.accione',
+		'app.movimiento',
+		'app.producto',
+		'app.ordene',
+		'app.pedido',
+		'app.proveedore',
+		'app.localidade',
+		'app.provincia',
+		'app.productos_proveedore',
+		'app.user',
+		'app.rol'
 	);
 
 /**

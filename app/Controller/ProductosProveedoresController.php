@@ -19,9 +19,8 @@ class ProductosProveedoresController extends AppController {
 	* Authentication
 	*****************************************************************************/
 	public function beforeFilter() {
-				parent::beforeFilter();
-				$this->Auth->allow();
-			}
+		parent::beforeFilter();
+	}
 
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
