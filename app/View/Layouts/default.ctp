@@ -46,6 +46,8 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 					<?php echo $siteTitle; ?>
 				</a>
 				<ul class="nav navbar-nav">
+
+					<!-- Productos -->
 					<li class="dropdown">
   					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							Productos<b class="caret"></b>
@@ -63,9 +65,24 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 									, array('controller' =>'productos','action' => 'index'));
 								?>
 							</li>
+							<li class="divider"></li>
+							<li>
+								<?php
+								echo $this->Html->link('Registrar Movimiento'
+									, array('controller' =>'movimientos','action' => 'add'));
+								?>
+							</li>
+							<li>
+								<?php
+								echo $this->Html->link('Listar Movimientos'
+									, array('controller' =>'movimientos','action' => 'index'));
+								?>
+							</li>
 						</ul>
 	        </li>
-	        <li class="dropdown">
+
+					<!-- Proveedores -->
+					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							Proveedores<b class="caret"></b>
 						</a>
@@ -84,6 +101,8 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 							</li>
 						</ul>
 	        </li>
+
+					<!-- Asociar Producto con Proveedor -->
 	        <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							Asociar<b class="caret"></b>

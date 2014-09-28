@@ -25,7 +25,7 @@ class MovimientosController extends AppController {
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
 		$user_allowed = array();
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add'));
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'index'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
@@ -81,15 +81,36 @@ class MovimientosController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			$movimiento = $this->request->data['Movimiento'];
+
+			# Se busca la acción del movimiento
+			# y se ajusta la cantidad si es necesario (ingreso o egreso).
+			$this->Movimiento->Accione->recursive = -1;
+			$accion = $this->Movimiento->Accione->findById($movimiento['accione_id']);
+			if($accion['Accione']['egreso']) $movimiento['cantidad'] *= -1;
+
+			$producto = $this->Movimiento->Producto->findById($movimiento['producto_id']);
+			$movimiento['cantidad_anterior'] = $producto['Producto']['stock'];
+			debug($movimiento);
+
 			$this->Movimiento->create();
-			if ($this->Movimiento->save($this->request->data)) {
+			if ($this->Movimiento->save($movimiento)) {
+				# Se guarda el nuevo stock
+				$this->Movimiento->Producto->id = $movimiento['producto_id'];
+				$nuevoStock = $movimiento['cantidad_anterior'] + $movimiento['cantidad'];
+				$this->Movimiento->Producto->saveField('stock', $nuevoStock);
 				$this->Session->setFlash(__('The movimiento has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The movimiento could not be saved. Please, try again.'));
 			}
 		}
-		$productos = $this->Movimiento->Producto->find('list');
+		$this->Movimiento->Producto->recursive = -1;
+		$this->Movimiento->Producto->virtualFields['nameStock'] =
+			'CONCAT(Producto.detalle, " (", Producto.stock, ")")';
+		$productos = $this->Movimiento->Producto->find('list'
+			, array('fields'=>array('id', 'nameStock')));
+		// $productos = $this->Movimiento->Producto->find('list');
 		$acciones = $this->Movimiento->Accione->find('list');
 		$users = $this->Movimiento->User->find('list');
 		$this->set(compact('productos', 'acciones', 'users'));
