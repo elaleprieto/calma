@@ -6,7 +6,6 @@
 		echo $this->Form->input('cantidad');
 		echo $this->Form->input('cantidad_anterior');
 		echo $this->Form->input('observaciones');
-		echo $this->Form->input('egreso');
 		echo $this->Form->input('producto_id');
 		echo $this->Form->input('accione_id');
 		echo $this->Form->input('user_id');

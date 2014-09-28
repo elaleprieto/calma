@@ -21,11 +21,6 @@
 			<?php echo h($movimiento['Movimiento']['observaciones']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Egreso'); ?></dt>
-		<dd>
-			<?php echo h($movimiento['Movimiento']['egreso']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($movimiento['Movimiento']['created']); ?>
