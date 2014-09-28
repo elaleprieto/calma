@@ -91,7 +91,6 @@ class MovimientosController extends AppController {
 
 			$producto = $this->Movimiento->Producto->findById($movimiento['producto_id']);
 			$movimiento['cantidad_anterior'] = $producto['Producto']['stock'];
-			debug($movimiento);
 
 			$this->Movimiento->create();
 			if ($this->Movimiento->save($movimiento)) {
@@ -110,7 +109,6 @@ class MovimientosController extends AppController {
 			'CONCAT(Producto.detalle, " (", Producto.stock, ")")';
 		$productos = $this->Movimiento->Producto->find('list'
 			, array('fields'=>array('id', 'nameStock')));
-		// $productos = $this->Movimiento->Producto->find('list');
 		$acciones = $this->Movimiento->Accione->find('list');
 		$users = $this->Movimiento->User->find('list');
 		$this->set(compact('productos', 'acciones', 'users'));
