@@ -61,6 +61,12 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 							</li>
 							<li>
 								<?php
+								echo $this->Html->link('Buscar'
+									, array('controller' =>'productos','action' => 'search'));
+								?>
+							</li>
+							<li>
+								<?php
 								echo $this->Html->link('Listar'
 									, array('controller' =>'productos','action' => 'index'));
 								?>
@@ -141,6 +147,9 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 		, '/bower_components/bootstrap/dist/js/bootstrap.min.js'
 		, '/bower_components/angular/angular.min.js'
 		, '/bower_components/angular-route/angular-route.min.js'
+		, '/bower_components/angular-resource/angular-resource.min.js'
+		, '/bower_components/angular-ui-utils/keypress.min'
+		, 'models'
 		, 'angular/controllers'
 	));
 	echo $this->fetch('script');
