@@ -17,14 +17,31 @@
 
   App.controller('ProductosController', [
     '$http', '$location', '$scope', '$timeout', 'Producto', function($http, $location, $scope, $timeout, Producto) {
+      $scope.calcularPrecioTotal = function(producto) {
+        return producto.precio_total = producto.precio_venta * producto.cantidad;
+      };
       $scope.calcularPrecioVenta = function() {
         if (+$scope.precioCompra > 0 && +$scope.porcentaje > 0) {
           return $scope.precioVenta = +$scope.precioCompra * (1 + +$scope.porcentaje / 100);
         }
       };
       $scope.search = function() {
+        if ($.isNumeric(+$scope.query)) {
+          return $scope.searchByBarCode(+$scope.query);
+        } else {
+          return $scope.searchByDetalle($scope.query);
+        }
+      };
+      $scope.searchByBarCode = function(barCode) {
         return Producto.getByBarCode({
-          barCode: $scope.query
+          barCode: barCode
+        }, function(data) {
+          return $scope.productos = data;
+        });
+      };
+      $scope.searchByDetalle = function(query) {
+        return Producto.getByDetalle({
+          query: query
         }, function(data) {
           return $scope.productos = data;
         });

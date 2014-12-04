@@ -9,6 +9,11 @@
           method: 'GET',
           url: '/productos/getByBarCode.json'
         },
+        getByDetalle: {
+          isArray: true,
+          method: 'GET',
+          url: '/productos/getByDetalle.json'
+        },
         get: {
           cache: true,
           method: 'GET',

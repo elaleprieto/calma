@@ -19,19 +19,28 @@
 			<tr>
 				<th>Código</th>
 				<th>Detalle</th>
+				<th>Precio Unitario</th>
+				<th>Cantidad</th>
+				<th>Precio Total</th>
 				<!-- <th><?php echo $this->Paginator->sort('detalle'); ?></th>
 				<th><?php echo $this->Paginator->sort('precio_compra'); ?></th>
-				<th><?php echo $this->Paginator->sort('precio_venta'); ?></th>
 				<th><?php echo $this->Paginator->sort('stock'); ?></th>
 				<th><?php echo $this->Paginator->sort('porcentaje'); ?></th>
 				<th><?php echo $this->Paginator->sort('stock_minimo'); ?></th>
 				<th class="actions"><?php echo __('Actions'); ?></th> -->
+				<th>Acciones</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr data-ng-repeat="producto in productos">
 				<td data-ng-bind="producto.Producto.barra">&nbsp;</td>
 				<td data-ng-bind="producto.Producto.detalle">&nbsp;</td>
+				<td data-ng-bind="producto.Producto.precio_venta">&nbsp;</td>
+				<td>
+					<input type="number" placeholder="Cantidad" 
+						data-ng-model="producto.Producto.cantidad" data-ng-change="calcularPrecioTotal(producto.Producto)">
+				</td>
+				<td data-ng-bind="producto.Producto.precio_total">&nbsp;</td>
 				<!-- <td><?php echo h($producto['Producto']['detalle']); ?>&nbsp;</td>
 				<td><?php echo h($producto['Producto']['precio_compra']); ?>&nbsp;</td>
 				<td><?php echo h($producto['Producto']['precio_venta']); ?>&nbsp;</td>
@@ -43,6 +52,9 @@
 					<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $producto['Producto']['id'])); ?>
 					<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $producto['Producto']['id']), array(), __('Are you sure you want to delete # %s?', $producto['Producto']['id'])); ?>
 				</td> -->
+				<td>
+					<button class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+				</td>
 			</tr>
 		</tbody>
 	</table>
