@@ -18,6 +18,10 @@
           cache: true,
           method: 'GET',
           url: '/productos.json'
+        },
+        vender: {
+          method: 'POST',
+          url: '/productos/vender.json'
         }
       });
     }

@@ -53,7 +53,7 @@
 					<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $producto['Producto']['id']), array(), __('Are you sure you want to delete # %s?', $producto['Producto']['id'])); ?>
 				</td> -->
 				<td>
-					<button class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+					<button class="btn btn-success" data-ng-click="vender(producto)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
 				</td>
 			</tr>
 		</tbody>

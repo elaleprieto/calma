@@ -41,6 +41,11 @@ App.controller 'ProductosController'
     $('#'+input).focus()
     @
 
+  $scope.vender = (producto) ->
+    Producto.vender {id:producto.Producto.id, cantidad:producto.Producto.cantidad}
+      , (data) ->
+        console.log data
+
   # init = ->
   #
   # $timeout () ->

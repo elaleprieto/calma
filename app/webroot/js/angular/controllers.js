@@ -46,10 +46,18 @@
           return $scope.productos = data;
         });
       };
-      return $scope.searchReset = function(input) {
+      $scope.searchReset = function(input) {
         $scope.query = '';
         $('#' + input).focus();
         return this;
+      };
+      return $scope.vender = function(producto) {
+        return Producto.vender({
+          id: producto.Producto.id,
+          cantidad: producto.Producto.cantidad
+        }, function(data) {
+          return console.log(data);
+        });
       };
     }
   ]);

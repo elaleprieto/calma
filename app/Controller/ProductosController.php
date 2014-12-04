@@ -17,7 +17,7 @@ class ProductosController extends AppController {
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
 		$user_allowed = array();
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalle', 'index', 'search', 'view'));
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalle', 'index', 'search', 'vender', 'view'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
@@ -169,6 +169,37 @@ class ProductosController extends AppController {
 		$options['recursive'] = -1;
 		$productos = $this->Producto->find('all', $options);
 		$this->set(array('productos' => $productos, '_serialize' => array('productos')));
+	}
+
+/**
+ * vender method
+ *
+ * @throws NotFoundException
+ * @param string $barCode
+ * @return void
+ */
+	public function vender() {
+		$this->layout = 'ajax';
+		if ($this->request->is(array('post', 'put'))) {
+			// if ($this->Producto->save($this->request->data)) {
+			// }
+			$data = $this->request->input('json_decode');
+			$this->Producto->id = $data->id;
+			$movimiento['cantidad_anterior'] = $this->Producto->field('stock');
+			$movimiento['cantidad'] = $data->cantidad * -1;
+			$movimiento['producto_id'] = $data->id;
+			$movimiento['accione_id'] = $this->Producto->Movimiento->Accione->field('id', array('name LIKE'=>'Venta%', 'egreso'=>1));
+
+			$this->Producto->Movimiento->create();
+			if ($this->Producto->Movimiento->save($movimiento)) {
+				$this->Producto->saveField('stock', $this->Producto->field('stock') - $data->cantidad);
+			}
+		}
+		// $query = $this->request->query['query'];
+		// $options['conditions'] = array('detalle LIKE' => "%$query%");
+		// $options['recursive'] = -1;
+		// $productos = $this->Producto->find('all', $options);
+		// $this->set(array('productos' => $productos, '_serialize' => array('productos')));
 	}
 
 /**
