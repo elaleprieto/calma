@@ -55,14 +55,15 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 						<ul class="dropdown-menu">
 							<li>
 								<?php
-								echo $this->Html->link('Nuevo'
-									, array('controller' =>'productos','action' => 'add'));
+								echo $this->Html->link('Vender'
+									, array('controller' =>'productos','action' => 'search'));
 								?>
 							</li>
+							<li class="divider"></li>
 							<li>
 								<?php
-								echo $this->Html->link('Buscar'
-									, array('controller' =>'productos','action' => 'search'));
+								echo $this->Html->link('Nuevo'
+									, array('controller' =>'productos','action' => 'add'));
 								?>
 							</li>
 							<li>

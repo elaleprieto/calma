@@ -17,13 +17,27 @@
 
   App.controller('ProductosController', [
     '$http', '$location', '$scope', '$timeout', 'Producto', function($http, $location, $scope, $timeout, Producto) {
+      $scope.calcularTotal = function() {
+        var total;
+        total = 0;
+        angular.forEach($scope.productos, function(producto, index) {
+          if (producto.Producto.cantidad) {
+            return total += producto.Producto.precio_venta * producto.Producto.cantidad;
+          }
+        });
+        return $scope.total = total;
+      };
       $scope.calcularPrecioTotal = function(producto) {
-        return producto.precio_total = producto.precio_venta * producto.cantidad;
+        producto.precio_total = producto.precio_venta * producto.cantidad;
+        return $scope.calcularTotal();
       };
       $scope.calcularPrecioVenta = function() {
         if (+$scope.precioCompra > 0 && +$scope.porcentaje > 0) {
           return $scope.precioVenta = +$scope.precioCompra * (1 + +$scope.porcentaje / 100);
         }
+      };
+      $scope.eliminarDeLista = function(index) {
+        return $scope.productos.splice(index);
       };
       $scope.search = function() {
         if ($.isNumeric(+$scope.query)) {
@@ -36,7 +50,12 @@
         return Producto.getByBarCode({
           barCode: barCode
         }, function(data) {
-          return $scope.productos = data;
+          if (data.length > 0) {
+            if (!$scope.productos) {
+              $scope.productos = [];
+            }
+            return $scope.productos = $scope.productos.concat(data);
+          }
         });
       };
       $scope.searchByDetalle = function(query) {
@@ -51,12 +70,22 @@
         $('#' + input).focus();
         return this;
       };
-      return $scope.vender = function(producto) {
+      $scope.vender = function(producto) {
+        if (!$.isNumeric(producto.Producto.cantidad)) {
+          return false;
+        }
         return Producto.vender({
           id: producto.Producto.id,
           cantidad: producto.Producto.cantidad
         }, function(data) {
-          return console.log(data);
+          return producto.Producto.cantidad = '';
+        }, function(error) {
+          return console.log(error.data.message);
+        });
+      };
+      return $scope.venderTodos = function() {
+        return angular.forEach($scope.productos, function(producto, index) {
+          return $scope.vender(producto);
         });
       };
     }

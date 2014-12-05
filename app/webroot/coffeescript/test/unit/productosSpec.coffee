@@ -92,7 +92,7 @@ describe 'Productos Controller Test', () ->
 			expect($scope.productos).toEqualData(result)
 			expect(+$scope.productos[0].Producto.codigo).toEqualData(300)
 
-	it 'debería descontar el stock', ->
+	it 'debería hacer la consulta para descontar el stock', ->
 			# Arrange
 			# result = [{"Producto":{"id":"5421e872-fb74-4f61-b5fc-310b55077360","codigo":"300","barra":"681131411493","orden":"999999","detalle":"Tortuga Ninja","unidad":null,"precio_compra":"100","precio_venta":"150","foto":"nofoto","created":"2014-09-23 18:38:58","modified":"2014-11-24 20:12:50","stock":"295","porcentaje":"50","stock_minimo":"10"}}]
 			result = ''
@@ -106,5 +106,21 @@ describe 'Productos Controller Test', () ->
 			
 			# Assert
 			# expect($scope.productos).toEqualData(result)
+			# expect(+$scope.productos[0].Producto.codigo).toEqualData(300)
+	
+	it 'no debería hacer la consulta para descontar el stock', ->
+			# Arrange
+			# result = [{"Producto":{"id":"5421e872-fb74-4f61-b5fc-310b55077360","codigo":"300","barra":"681131411493","orden":"999999","detalle":"Tortuga Ninja","unidad":null,"precio_compra":"100","precio_venta":"150","foto":"nofoto","created":"2014-09-23 18:38:58","modified":"2014-11-24 20:12:50","stock":"295","porcentaje":"50","stock_minimo":"10"}}]
+			result = ''
+			producto = {"Producto":{"id":"5421e872-fb74-4f61-b5fc-310b55077360","codigo":"300","barra":"681131411493","orden":"999999","detalle":"Tortuga Ninja","unidad":null,"precio_compra":"100","precio_venta":"150","foto":"nofoto","created":"2014-09-23 18:38:58","modified":"2014-11-24 20:12:50","stock":"295","porcentaje":"50","stock_minimo":"10", "cantidad":"A"}}
+			# @mockBackend.expectPOST('/productos/vender.json?callback=JSON_CALLBACK', {"id":"5421e872-fb74-4f61-b5fc-310b55077360", "cantidad":"A"}).respond(result);
+			$scope.query = 'Tortuga'
+			
+			# Act
+			response = $scope.vender(producto)
+			# @mockBackend.flush()
+			
+			# Assert
+			expect(response).toBe(false)
 			# expect(+$scope.productos[0].Producto.codigo).toEqualData(300)
 

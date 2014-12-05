@@ -3,11 +3,13 @@
 	<table cellpadding="0" cellspacing="0" class="table">
 		<thead>
 			<tr>
-				<th><?php echo $this->Paginator->sort('created', 'Fecha'); ?></th>
+				<th class="text-center"><?php echo $this->Paginator->sort('created', 'Fecha'); ?></th>
 				<th><?php echo $this->Paginator->sort('producto_id'); ?></th>
-				<th><?php echo $this->Paginator->sort('cantidad'); ?></th>
-				<th><?php echo $this->Paginator->sort('cantidad_anterior'); ?></th>
-				<th><?php echo $this->Paginator->sort('observaciones'); ?></th>
+				<th class="text-center"><?php echo $this->Paginator->sort('cantidad'); ?></th>
+				<th class="text-center"><?php echo $this->Paginator->sort('cantidad_anterior'); ?></th>
+				<th class="text-right"><?php echo $this->Paginator->sort('precio_compra'); ?></th>
+				<th class="text-right"><?php echo $this->Paginator->sort('precio_venta'); ?></th>
+				<th class="text-center"><?php echo $this->Paginator->sort('observaciones'); ?></th>
 				<!-- <th><?php echo $this->Paginator->sort('accione_id'); ?></th> -->
 				<!-- <th class="actions"><?php echo __('Actions'); ?></th> -->
 			</tr>
@@ -15,7 +17,7 @@
 		<tbody>
 			<?php foreach ($movimientos as $movimiento): ?>
 				<tr>
-					<td>
+					<td class="text-center col-lg-1" nowrap="nowrap">
 						<?php echo $this->Time->format($movimiento['Movimiento']['created']
 							, '%d-%m-%Y %H:%M'); ?>
 						&nbsp;
@@ -23,8 +25,10 @@
 					<td>
 						<?php echo $this->Html->link($movimiento['Producto']['detalle'], array('controller' => 'productos', 'action' => 'view', $movimiento['Producto']['id'])); ?>
 					</td>
-					<td><?php echo h($movimiento['Movimiento']['cantidad']); ?>&nbsp;</td>
-					<td><?php echo h($movimiento['Movimiento']['cantidad_anterior']); ?>&nbsp;</td>
+					<td class="text-center col-lg-1" nowrap="nowrap"><?php echo h($movimiento['Movimiento']['cantidad']); ?>&nbsp;</td>
+					<td class="text-center col-lg-1" nowrap="nowrap"><?php echo h($movimiento['Movimiento']['cantidad_anterior']); ?>&nbsp;</td>
+					<td class="text-right col-lg-1" nowrap="nowrap"><?php echo $this->Number->currency($movimiento['Movimiento']['precio_compra']); ?>&nbsp;</td>
+					<td class="text-right col-lg-1" nowrap="nowrap"><?php echo $this->Number->currency($movimiento['Movimiento']['precio_venta']); ?>&nbsp;</td>
 					<td><?php echo h($movimiento['Movimiento']['observaciones']); ?>&nbsp;</td>
 					<!-- <td>
 						<?php echo $this->Html->link($movimiento['Accione']['name'], array('controller' => 'acciones', 'action' => 'view', $movimiento['Accione']['id'])); ?>

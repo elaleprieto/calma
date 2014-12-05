@@ -175,31 +175,20 @@ class ProductosController extends AppController {
  * vender method
  *
  * @throws NotFoundException
- * @param string $barCode
+ * @param string $producto por post
  * @return void
  */
 	public function vender() {
 		$this->layout = 'ajax';
 		if ($this->request->is(array('post', 'put'))) {
-			// if ($this->Producto->save($this->request->data)) {
-			// }
 			$data = $this->request->input('json_decode');
-			$this->Producto->id = $data->id;
-			$movimiento['cantidad_anterior'] = $this->Producto->field('stock');
-			$movimiento['cantidad'] = $data->cantidad * -1;
-			$movimiento['producto_id'] = $data->id;
-			$movimiento['accione_id'] = $this->Producto->Movimiento->Accione->field('id', array('name LIKE'=>'Venta%', 'egreso'=>1));
-
-			$this->Producto->Movimiento->create();
-			if ($this->Producto->Movimiento->save($movimiento)) {
-				$this->Producto->saveField('stock', $this->Producto->field('stock') - $data->cantidad);
+			$accioneId = $this->Producto->Movimiento->Accione->field('id', array('name LIKE'=>'Venta%', 'egreso'=>1));
+			# Se egresa el Producto
+			if(!$this->Producto->Movimiento->egresar($data->id, $data->cantidad, $accioneId)) {
+			// if(!$this->Producto->Movimiento->egresar($data->id, $data->cantidad)) {
+				throw new NotFoundException('No se pudo vender el producto.');
 			}
 		}
-		// $query = $this->request->query['query'];
-		// $options['conditions'] = array('detalle LIKE' => "%$query%");
-		// $options['recursive'] = -1;
-		// $productos = $this->Producto->find('all', $options);
-		// $this->set(array('productos' => $productos, '_serialize' => array('productos')));
 	}
 
 /**
