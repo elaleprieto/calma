@@ -8,12 +8,19 @@ App::uses('AppController', 'Controller');
  */
 class MovimientosController extends AppController {
 
+
 /**
  * Components
  *
  * @var array
  */
 	public $components = array('Paginator');
+	public $paginate = array(
+        'limit' => 50,
+        'order' => array(
+            'Movimiento.created' => 'desc'
+        )
+    );
 
 	/*****************************************************************************
 	* Authentication
@@ -56,6 +63,7 @@ class MovimientosController extends AppController {
  */
 	public function index() {
 		$this->Movimiento->recursive = 0;
+		$this->Paginator->settings = $this->paginate;
 		$this->set('movimientos', $this->Paginator->paginate());
 	}
 
