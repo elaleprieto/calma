@@ -59,6 +59,12 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 									, array('controller' =>'productos','action' => 'search'));
 								?>
 							</li>
+							<li>
+								<?php
+								echo $this->Html->link('Buscador para Clientes'
+									, array('controller' =>'productos','action' => 'searchClientes'));
+								?>
+							</li>
 							<li class="divider"></li>
 							<li>
 								<?php
@@ -85,8 +91,15 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 									, array('controller' =>'movimientos','action' => 'index'));
 								?>
 							</li>
+							<li class="divider"></li>
+							<li>
+								<?php
+								echo $this->Html->link('Reporte'
+									, array('controller' =>'movimientos','action' => 'reporte'));
+								?>
+							</li>
 						</ul>
-	        </li>
+	        		</li>
 
 					<!-- Proveedores -->
 					<li class="dropdown">
@@ -141,7 +154,9 @@ $cakeVersion = __d('cake_dev', 'Calmacapricho %s', Configure::version())
 		<?php echo $this->fetch('content'); ?>
 	</section>
 
-	<footer>Sistema de Gestión Calmacapricho</footer>
+	<footer class="navbar navbar-inverse navbar-fixed-bottom">
+		Sistema de Gestión Calmacapricho
+	</footer>
 
 	<?php
 	echo $this->Html->script(array('/bower_components/jquery/dist/jquery.min'

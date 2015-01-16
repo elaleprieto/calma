@@ -16,7 +16,7 @@ class ProductosController extends AppController {
 
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
-		$user_allowed = array();
+		$user_allowed = array('searchClientes');
 		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalle', 'index', 'search', 'vender', 'view'));
 
 		# All registered users can:
@@ -199,5 +199,16 @@ class ProductosController extends AppController {
  * @return void
  */
 	public function search() {
+	}
+
+/**
+ * searchClientes method
+ *
+ * @throws NotFoundException
+ * @param string $barCode
+ * @return void
+ */
+	public function searchClientes() {
+		$this->layout = 'clientes';
 	}
 }

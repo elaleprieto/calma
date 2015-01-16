@@ -16,7 +16,8 @@
 
 
   App.controller('ProductosController', [
-    '$http', '$location', '$scope', '$timeout', 'Producto', function($http, $location, $scope, $timeout, Producto) {
+    '$http', '$location', '$scope', '$timeout', '$window', 'Producto', function($http, $location, $scope, $timeout, $window, Producto) {
+      var barcodeAux, lastBarcodeAux;
       $scope.calcularTotal = function() {
         var total;
         total = 0;
@@ -39,9 +40,13 @@
       $scope.eliminarDeLista = function(index) {
         return $scope.productos.splice(index);
       };
+      $scope.readKeyPressed = function(event) {
+        return console.log(event);
+      };
       $scope.search = function() {
         if ($.isNumeric(+$scope.query)) {
-          return $scope.searchByBarCode(+$scope.query);
+          $scope.searchByBarCode(+$scope.query);
+          return $scope.query = '';
         } else {
           return $scope.searchByDetalle($scope.query);
         }
@@ -51,10 +56,15 @@
           barCode: barCode
         }, function(data) {
           if (data.length > 0) {
+            angular.forEach(data, function(producto, index) {
+              producto.Producto.cantidad = 1;
+              return producto.Producto.precio_total = producto.Producto.precio_venta * producto.Producto.cantidad;
+            });
             if (!$scope.productos) {
               $scope.productos = [];
             }
-            return $scope.productos = $scope.productos.concat(data);
+            $scope.productos = $scope.productos.concat(data);
+            return $scope.calcularTotal();
           }
         });
       };
@@ -83,11 +93,25 @@
           return console.log(error.data.message);
         });
       };
-      return $scope.venderTodos = function() {
+      $scope.venderTodos = function() {
         return angular.forEach($scope.productos, function(producto, index) {
           return $scope.vender(producto);
         });
       };
+      barcodeAux = [];
+      lastBarcodeAux = Date.now();
+      return angular.element($window).on('keypress', function(e) {
+        if (e.which >= 48 && e.which <= 57) {
+          if (Date.now() - lastBarcodeAux >= 20) {
+            barcodeAux = [];
+          }
+          barcodeAux.push(String.fromCharCode(e.which));
+          return lastBarcodeAux = Date.now();
+        } else if (e.which === 13) {
+          $scope.searchByBarCode(barcodeAux.join('').substr(-13));
+          return barcodeAux = [];
+        }
+      });
     }
   ]);
 

@@ -10,8 +10,8 @@ App = angular.module('App', ['ngRoute', 'models', 'ui.keypress'])
       Tracks
 *************************************************************************** ###
 App.controller 'ProductosController'
-  , ['$http', '$location', '$scope', '$timeout', 'Producto'
-    , ($http, $location, $scope, $timeout, Producto) ->
+  , ['$http', '$location', '$scope', '$timeout', '$window', 'Producto'
+    , ($http, $location, $scope, $timeout, $window, Producto) ->
 
   $scope.calcularTotal = ->
     total = 0
@@ -30,18 +30,26 @@ App.controller 'ProductosController'
   $scope.eliminarDeLista = (index) ->
     $scope.productos.splice(index)
 
+  $scope.readKeyPressed = (event)->
+    console.log event
+
   $scope.search = ->
     if $.isNumeric(+$scope.query)
       $scope.searchByBarCode(+$scope.query)
+      $scope.query = ''
     else
       $scope.searchByDetalle($scope.query)
   
   $scope.searchByBarCode = (barCode) ->
       Producto.getByBarCode {barCode: barCode}
         , (data) ->
-          if data.length > 0 
+          if data.length > 0
+            angular.forEach data, (producto, index) ->
+              producto.Producto.cantidad = 1
+              producto.Producto.precio_total = producto.Producto.precio_venta * producto.Producto.cantidad
             if !$scope.productos then $scope.productos = []
             $scope.productos = $scope.productos.concat(data)
+            $scope.calcularTotal()
 
   $scope.searchByDetalle = (query) ->
       Producto.getByDetalle {query: query}
@@ -70,5 +78,24 @@ App.controller 'ProductosController'
   # $timeout () ->
   #   init()
   # , 200
+
+
+  barcodeAux = []
+  lastBarcodeAux = Date.now()
+  angular.element($window).on 'keypress', (e) ->
+    # Si es un número, lo agrego al barcodeAux
+    if e.which >= 48 and e.which <= 57 
+      # Si el tiempo en milisegundos es mayor a 20, blanqueo la variable lastBarcodeAux antes de agregar el número.
+      # Esto es así porque lo más rápido que puede apretar un tecla el usuario, parece que es 30 milisegundos, manteniendo la tecla apretada.
+      # El lector lee a 8 milisegundos.
+      if Date.now() - lastBarcodeAux >= 20 then barcodeAux = []
+      barcodeAux.push(String.fromCharCode(e.which))
+      lastBarcodeAux = Date.now()
+    # Si es un enter, tomo los últimos 13 números agregados (EAN13) y busco por BarCode
+    else if e.which is 13 
+      $scope.searchByBarCode(barcodeAux.join('').substr(-13))
+      barcodeAux = []
+
+    # console.log e.which + ":" + barcodeAux.join("|")
 
 ]
