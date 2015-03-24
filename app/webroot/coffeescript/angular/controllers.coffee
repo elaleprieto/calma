@@ -1,4 +1,4 @@
-App = angular.module('App', ['ngRoute', 'models', 'ui.keypress'])
+App = angular.module('App', ['ngRoute', 'models', 'ui.bootstrap', 'ui.keypress'])
 
 
 ### ***************************************************************************
@@ -7,7 +7,7 @@ App = angular.module('App', ['ngRoute', 'models', 'ui.keypress'])
 # App.value '$strapConfig', datepicker: language: 'es'
 
 ### ***************************************************************************
-      Tracks
+      Productos
 *************************************************************************** ###
 App.controller 'ProductosController'
   , ['$http', '$location', '$scope', '$timeout', '$window', 'Producto'
@@ -97,5 +97,41 @@ App.controller 'ProductosController'
       barcodeAux = []
 
     # console.log e.which + ":" + barcodeAux.join("|")
+]
+
+
+### ***************************************************************************
+      Reportes
+*************************************************************************** ###
+App.controller 'ReportesController'
+  , ['$http', '$location', '$scope', '$timeout', '$window', 'Reporte'
+    , ($http, $location, $scope, $timeout, $window, Reporte) ->
+   
+  $scope.today = ->
+    $scope.dt = new Date()
+  
+  $scope.today()
+
+  $scope.clear = ->
+    $scope.dt = null
+
+  # Disable weekend selection
+  $scope.disabled = (date, mode) ->
+    return (mode is 'day' and (date.getDay() is 0 or date.getDay() is 6 ))
+
+  $scope.toggleMin = ->
+    $scope.minDate = $scope.minDate ? null : new Date()
+  $scope.toggleMin()
+
+  $scope.open = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+
+    $scope.opened = true
+
+  $scope.dateOptions = {formatYear: 'yy', startingDay: 1}
+
+  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate']
+  $scope.format = $scope.formats[0]
 
 ]

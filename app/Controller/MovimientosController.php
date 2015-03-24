@@ -32,7 +32,7 @@ class MovimientosController extends AppController {
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
 		$user_allowed = array();
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'index'));
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'index', 'reporte'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
@@ -169,5 +169,9 @@ class MovimientosController extends AppController {
 			$this->Session->setFlash(__('The movimiento could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function reporte() {
+		
 	}
 }

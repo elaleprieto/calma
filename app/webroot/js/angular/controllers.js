@@ -1,7 +1,7 @@
 (function() {
   var App;
 
-  App = angular.module('App', ['ngRoute', 'models', 'ui.keypress']);
+  App = angular.module('App', ['ngRoute', 'models', 'ui.bootstrap', 'ui.keypress']);
 
   /* ***************************************************************************
         Definición de variables
@@ -10,7 +10,7 @@
 
 
   /* ***************************************************************************
-        Tracks
+        Productos
   ***************************************************************************
   */
 
@@ -112,6 +112,45 @@
           return barcodeAux = [];
         }
       });
+    }
+  ]);
+
+  /* ***************************************************************************
+        Reportes
+  ***************************************************************************
+  */
+
+
+  App.controller('ReportesController', [
+    '$http', '$location', '$scope', '$timeout', '$window', 'Reporte', function($http, $location, $scope, $timeout, $window, Reporte) {
+      $scope.today = function() {
+        return $scope.dt = new Date();
+      };
+      $scope.today();
+      $scope.clear = function() {
+        return $scope.dt = null;
+      };
+      $scope.disabled = function(date, mode) {
+        return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+      };
+      $scope.toggleMin = function() {
+        var _ref;
+        return $scope.minDate = (_ref = $scope.minDate) != null ? _ref : {
+          "null": new Date()
+        };
+      };
+      $scope.toggleMin();
+      $scope.open = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        return $scope.opened = true;
+      };
+      $scope.dateOptions = {
+        formatYear: 'yy',
+        startingDay: 1
+      };
+      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+      return $scope.format = $scope.formats[0];
     }
   ]);
 
