@@ -17,7 +17,7 @@
 
   App.controller('ProductosController', [
     '$http', '$location', '$scope', '$timeout', '$window', 'Producto', function($http, $location, $scope, $timeout, $window, Producto) {
-      var barcodeAux, lastBarcodeAux;
+      var agregarProductos, barcodeAux, lastBarcodeAux;
       $scope.calcularTotal = function() {
         var total;
         total = 0;
@@ -48,31 +48,48 @@
           $scope.searchByBarCode(+$scope.query);
           return $scope.query = '';
         } else {
-          return $scope.searchByDetalle($scope.query);
+          return $scope.searchByDetalleOCodigoInterno($scope.query);
         }
       };
       $scope.searchByBarCode = function(barCode) {
         return Producto.getByBarCode({
           barCode: barCode
         }, function(data) {
-          if (data.length > 0) {
-            angular.forEach(data, function(producto, index) {
+          var productos;
+          productos = data.productos;
+          if (productos.length > 0) {
+            angular.forEach(productos, function(producto, index) {
               producto.Producto.cantidad = 1;
               return producto.Producto.precio_total = producto.Producto.precio_venta * producto.Producto.cantidad;
             });
             if (!$scope.productos) {
               $scope.productos = [];
             }
-            $scope.productos = $scope.productos.concat(data);
+            agregarProductos(productos);
             return $scope.calcularTotal();
           }
         });
       };
-      $scope.searchByDetalle = function(query) {
-        return Producto.getByDetalle({
+      agregarProductos = function(productosNuevos) {
+        var existe;
+        existe = false;
+        return angular.forEach(productosNuevos, function(productoNuevo, indexNuevos) {
+          angular.forEach($scope.productos, function(producto, index) {
+            if (productoNuevo.Producto.id === producto.Producto.id) {
+              return existe = true;
+            }
+          });
+          if (!existe) {
+            $scope.productos.push(productoNuevo);
+            return existe = false;
+          }
+        });
+      };
+      $scope.searchByDetalleOCodigoInterno = function(query) {
+        return Producto.getByDetalleOCodigoInterno({
           query: query
         }, function(data) {
-          return $scope.productos = data;
+          return $scope.productos = data.productos;
         });
       };
       $scope.searchReset = function(input) {

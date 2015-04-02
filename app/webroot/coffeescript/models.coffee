@@ -4,8 +4,8 @@ angular.module('models', ['ngResource'])
 	.factory('Producto', ['$resource', ($resource) ->
 		$resource '/productos.json'
 			, { callback:'JSON_CALLBACK' }
-			, getByBarCode: {isArray: true, method: 'GET', url: '/productos/getByBarCode.json'}
-				, getByDetalle: {isArray: true, method: 'GET', url: '/productos/getByDetalle.json'}
+			, getByBarCode: {isArray: false, method: 'GET', url: '/productos/getByBarCode.json'}
+				, getByDetalleOCodigoInterno: {isArray: false, method: 'GET', url: '/productos/getByDetalleOCodigoInterno.json'}
 				, get: {cache: true, method: 'GET', url: '/productos.json'}
 				, vender: {method: 'POST', url: '/productos/vender.json'}
 	])	
@@ -14,7 +14,7 @@ angular.module('models', ['ngResource'])
 		$resource '/productos.json'
 			, { callback:'JSON_CALLBACK' }
 			, getByBarCode: {isArray: true, method: 'GET', url: '/productos/getByBarCode.json'}
-				, getByDetalle: {isArray: true, method: 'GET', url: '/productos/getByDetalle.json'}
+				, getByDetalleOCodigoInterno: {isArray: true, method: 'GET', url: '/productos/getByDetalleOCodigoInterno.json'}
 				, get: {cache: true, method: 'GET', url: '/productos.json'}
 				, vender: {method: 'POST', url: '/productos/vender.json'}
 	])

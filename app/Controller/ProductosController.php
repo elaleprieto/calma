@@ -17,7 +17,7 @@ class ProductosController extends AppController {
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
 		$user_allowed = array('searchClientes');
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalle', 'index', 'search', 'vender', 'view'));
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalleOCodigoInterno', 'index', 'search', 'vender', 'view'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
@@ -140,7 +140,6 @@ class ProductosController extends AppController {
  * getByBarCode method
  *
  * @throws NotFoundException
- * @param string $barCode
  * @return void
  */
 	public function getByBarCode() {
@@ -159,13 +158,11 @@ class ProductosController extends AppController {
  * getByDetalle method
  *
  * @throws NotFoundException
- * @param string $barCode
  * @return void
  */
-	public function getByDetalle() {
-		$this->layout = 'ajax';
+	public function getByDetalleOCodigoInterno() {
 		$query = $this->request->query['query'];
-		$options['conditions'] = array('detalle LIKE' => "%$query%");
+		$options['conditions'] = array('OR' => array('detalle LIKE' => "%$query%", 'codigo LIKE' => "%$query%"));
 		$options['recursive'] = -1;
 		$productos = $this->Producto->find('all', $options);
 		$this->set(array('productos' => $productos, '_serialize' => array('productos')));

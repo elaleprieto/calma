@@ -5,14 +5,14 @@
         callback: 'JSON_CALLBACK'
       }, {
         getByBarCode: {
-          isArray: true,
+          isArray: false,
           method: 'GET',
           url: '/productos/getByBarCode.json'
         },
-        getByDetalle: {
-          isArray: true,
+        getByDetalleOCodigoInterno: {
+          isArray: false,
           method: 'GET',
-          url: '/productos/getByDetalle.json'
+          url: '/productos/getByDetalleOCodigoInterno.json'
         },
         get: {
           cache: true,
@@ -35,10 +35,10 @@
           method: 'GET',
           url: '/productos/getByBarCode.json'
         },
-        getByDetalle: {
+        getByDetalleOCodigoInterno: {
           isArray: true,
           method: 'GET',
-          url: '/productos/getByDetalle.json'
+          url: '/productos/getByDetalleOCodigoInterno.json'
         },
         get: {
           cache: true,

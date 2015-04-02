@@ -38,23 +38,34 @@ App.controller 'ProductosController'
       $scope.searchByBarCode(+$scope.query)
       $scope.query = ''
     else
-      $scope.searchByDetalle($scope.query)
-  
+      $scope.searchByDetalleOCodigoInterno($scope.query)
+
   $scope.searchByBarCode = (barCode) ->
       Producto.getByBarCode {barCode: barCode}
         , (data) ->
-          if data.length > 0
-            angular.forEach data, (producto, index) ->
+          productos = data.productos
+          if productos.length > 0
+            angular.forEach productos, (producto, index) ->
               producto.Producto.cantidad = 1
               producto.Producto.precio_total = producto.Producto.precio_venta * producto.Producto.cantidad
             if !$scope.productos then $scope.productos = []
-            $scope.productos = $scope.productos.concat(data)
+            # $scope.productos = $scope.productos.concat(productos) if not existen($productos)
+            agregarProductos(productos)
             $scope.calcularTotal()
 
-  $scope.searchByDetalle = (query) ->
-      Producto.getByDetalle {query: query}
+  agregarProductos = (productosNuevos) ->
+    existe = false
+    angular.forEach productosNuevos, (productoNuevo, indexNuevos) ->
+      angular.forEach $scope.productos, (producto, index) ->
+        if productoNuevo.Producto.id is producto.Producto.id then existe = true
+      if not existe 
+        $scope.productos.push(productoNuevo)
+        existe = false
+
+  $scope.searchByDetalleOCodigoInterno = (query) ->
+      Producto.getByDetalleOCodigoInterno {query: query}
         , (data) ->
-          $scope.productos = data
+          $scope.productos = data.productos
 
   $scope.searchReset = (input) ->
     $scope.query = ''
