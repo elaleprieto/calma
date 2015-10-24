@@ -7,6 +7,8 @@ app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
 app/webroot/.sass-cache/*
+app/webroot/bower_components/*
+app/webroot/node_modules/*
 
 # User specific & automatically generated files #
 #################################################
