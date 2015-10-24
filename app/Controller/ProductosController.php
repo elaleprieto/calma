@@ -16,8 +16,8 @@ class ProductosController extends AppController {
 
 	public function isAuthorized($user = null) {
 		$owner_allowed = array();
-		$user_allowed = array();
-		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'index', 'view'));
+		$user_allowed = array('searchClientes');
+		$admin_allowed = array_merge($owner_allowed, $user_allowed, array('add', 'delete', 'edit', 'getByBarCode', 'getByDetalleOCodigoInterno', 'index', 'search', 'vender', 'view'));
 
 		# All registered users can:
 		if (in_array($this->action, $user_allowed))
@@ -134,5 +134,78 @@ class ProductosController extends AppController {
 			$this->Session->setFlash(__('The producto could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+
+/**
+ * getByBarCode method
+ *
+ * @throws NotFoundException
+ * @return void
+ */
+	public function getByBarCode() {
+		// $this->autoRender = FALSE;
+		$this->layout = 'ajax';
+		$barCode = $this->request->query['barCode'];
+		$options['conditions'] = array('barra LIKE' => "%$barCode%");
+		$options['recursive'] = -1;
+		$productos = $this->Producto->find('all', $options);
+		// debug($productos, $showHtml = null, $showFrom = true);
+		// return $productos;
+		$this->set(array('productos' => $productos, '_serialize' => array('productos')));
+	}
+
+/**
+ * getByDetalle method
+ *
+ * @throws NotFoundException
+ * @return void
+ */
+	public function getByDetalleOCodigoInterno() {
+		$query = $this->request->query['query'];
+		$options['conditions'] = array('OR' => array('detalle LIKE' => "%$query%", 'codigo LIKE' => "%$query%"));
+		$options['recursive'] = -1;
+		$productos = $this->Producto->find('all', $options);
+		$this->set(array('productos' => $productos, '_serialize' => array('productos')));
+	}
+
+/**
+ * vender method
+ *
+ * @throws NotFoundException
+ * @param string $producto por post
+ * @return void
+ */
+	public function vender() {
+		$this->layout = 'ajax';
+		if ($this->request->is(array('post', 'put'))) {
+			$data = $this->request->input('json_decode');
+			$accioneId = $this->Producto->Movimiento->Accione->field('id', array('name LIKE'=>'Venta%', 'egreso'=>1));
+			# Se egresa el Producto
+			if(!$this->Producto->Movimiento->egresar($data->id, $data->cantidad, $accioneId)) {
+			// if(!$this->Producto->Movimiento->egresar($data->id, $data->cantidad)) {
+				throw new NotFoundException('No se pudo vender el producto.');
+			}
+		}
+	}
+
+/**
+ * search method
+ *
+ * @throws NotFoundException
+ * @param string $barCode
+ * @return void
+ */
+	public function search() {
+	}
+
+/**
+ * searchClientes method
+ *
+ * @throws NotFoundException
+ * @param string $barCode
+ * @return void
+ */
+	public function searchClientes() {
+		$this->layout = 'clientes';
 	}
 }

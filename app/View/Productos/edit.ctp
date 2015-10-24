@@ -1,5 +1,3 @@
-<?php debug($this->data) ?>
-
 <div data-ng-controller="ProductosController">
 	<?php echo $this->Form->create('Producto'); ?>
 		<fieldset>

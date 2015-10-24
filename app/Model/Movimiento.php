@@ -87,4 +87,31 @@ class Movimiento extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+/**
+ * egresar method
+ * Dado un producto y una cantidad, registra el egreso de mercadería y reduce el stock del producto.
+ *
+ * @return void
+ */
+	public function egresar($productoId = null, $cantidad = null, $accioneId = null) {
+		if($productoId && $cantidad && $accioneId) {
+			$this->Producto->id = $productoId;
+			$movimiento['producto_id'] = $productoId;
+			$movimiento['cantidad_anterior'] = $this->Producto->field('stock');
+			$movimiento['precio_compra'] = $this->Producto->field('precio_compra');
+			$movimiento['precio_venta'] = $this->Producto->field('precio_venta');
+			$movimiento['accione_id'] = $accioneId;
+			$movimiento['cantidad'] = $cantidad;
+
+			$this->create();
+			if ($this->save($movimiento)) {
+				# Se guarda el nuevo stock
+				$this->Producto->saveField('stock', $movimiento['cantidad_anterior'] - $cantidad);
+				return TRUE;
+			}
+		}
+		return FALSE;
+	}
 }

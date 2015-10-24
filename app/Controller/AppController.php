@@ -34,6 +34,7 @@ class AppController extends Controller {
   public $uses = array('User');
 
 	public $components = array(
+		'RequestHandler',
 		'Session',
 		'Auth' => array(
 			'loginAction' => array(

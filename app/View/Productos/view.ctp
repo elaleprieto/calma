@@ -68,6 +68,37 @@
 		</dd>
 	</dl>
 </div>
+
+<div class="related">
+	<h3>Últimos Movimientos</h3>
+	<?php if (!empty($producto['Movimiento'])): ?>
+		<table cellpadding = "0" cellspacing = "0">
+		<tr>
+			<th class="text-center">Fecha</th>
+			<th class="text-center">Cantidad</th>
+			<th class="text-center">Cantidad Anterior</th>
+			<th class="text-right">Precio Compra</th>
+			<th class="text-right">Precio Venta</th>
+			<th class="text-center">Observaciones</th>
+		</tr>
+		<?php foreach ($producto['Movimiento'] as $movimiento): ?>
+			<tr>
+				<td class="text-center col-lg-1" nowrap="nowrap">
+					<?php echo $this->Time->format($movimiento['created']
+						, '%d-%m-%Y %H:%M'); ?>
+					&nbsp;
+				</td>
+				<td class="text-center" nowrap="nowrap"><?php echo h($movimiento['cantidad']); ?>&nbsp;</td>
+				<td class="text-center" nowrap="nowrap"><?php echo h($movimiento['cantidad_anterior']); ?>&nbsp;</td>
+				<td class="text-right" nowrap="nowrap"><?php echo $this->Number->currency($movimiento['precio_compra']); ?>&nbsp;</td>
+				<td class="text-right" nowrap="nowrap"><?php echo $this->Number->currency($movimiento['precio_venta']); ?>&nbsp;</td>
+				<td><?php echo h($movimiento['observaciones']); ?>&nbsp;</td>
+			</tr>
+		<?php endforeach; ?>
+		</table>
+	<?php endif; ?>
+</div>
+
 <!-- <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
